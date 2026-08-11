@@ -1,0 +1,119 @@
+@media (max-width: 920px) {
+  .stage-layer { padding: 24px 26px 88px; }
+
+  .camera-stage .stage-copy, .scan-stage .stage-copy {
+    grid-template-columns: minmax(220px, .65fr) minmax(370px, 1.2fr);
+    column-gap: 25px;
+  }
+  .scan-console { grid-template-columns: 1fr 135px; }
+  .fortune-stage { grid-template-columns: 185px 1fr; gap: 28px; }
+  .result-visual { width: 180px; height: 360px; }
+  .result-card { width: 118px; }
+  .result-card b { width: 70px; height: 70px; font-size: 40px; }
+  .result-card strong { font-size: 20px; }
+}
+
+@media (max-width: 700px) {
+  .app-header { padding: 12px 16px; }
+  .brand-orb { width: 39px; height: 39px; font-size: 17px; }
+  .brand-lockup b { font-size: 17px; }
+  .brand-lockup small { font-size: 6px; }
+  .stage-count i { width: 28px; }
+  .stage-layer { padding: 12px 14px 86px; }
+  .stage { height: 100%; }
+  .stage h1 { font-size: clamp(44px, 15vw, 70px); }
+
+  .intro-stage .stage-copy { padding: 25px 20px 22px; }
+  .intro-actions { align-items: stretch; flex-direction: column; gap: 14px; margin-top: 24px; }
+  .intro-actions .brutal-button { width: 100%; justify-content: space-between; }
+  .intro-actions .text-button { align-self: center; }
+  .hesitation { margin-top: 13px; text-align: center; }
+
+  .profile-stage { justify-items: center; }
+  .profile-stage .stage-copy { padding: 22px 19px; }
+  .profile-stage h1 { font-size: 49px; }
+  .identity-form { gap: 13px; margin-top: 18px; }
+  .identity-form input, .date-part select { height: 47px; }
+  .date-selects { gap: 6px; }
+  .date-part select { padding-right: 24px; padding-left: 8px; font-size: 14px; }
+  .date-part::after { right: 8px; bottom: 15px; }
+  .identity-form .brutal-button { width: 100%; justify-content: space-between; min-height: 52px; }
+
+  .camera-stage .stage-copy, .scan-stage .stage-copy {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+  }
+  .camera-stage .eyebrow, .scan-stage .eyebrow { margin-bottom: 7px; }
+  .camera-stage h1, .scan-stage h1 { font-size: 41px; line-height: .92; }
+  .camera-module { width: min(100%, 430px); margin-top: 14px; padding: 7px; transform: none; }
+  .camera-bezel { aspect-ratio: 1.45; }
+  .camera-readout { min-height: 45px; padding: 6px 3px 3px; }
+  .camera-readout p small { display: none; }
+  .privacy-note { margin-top: 10px; padding: 7px 9px; font-size: 8px; }
+  .hand-guide { transform: translate(-50%, -43%) scale(.72); }
+  .palm-guide.is-active .hand-guide { animation: none; transform: translate(-50%, -43%) scale(.72); }
+
+  .scan-console { width: min(100%, 420px); grid-template-columns: 1fr 112px; margin-top: 14px; padding: 7px; box-shadow: 6px 6px 0 var(--ink); transform: none; }
+  .scan-data p { padding: 6px; }
+  .scan-caption { width: min(100%, 420px); margin-top: 12px; }
+  .scan-caption span { padding: 8px; font-size: 19px; }
+  .scan-caption p { padding: 7px; font-size: 8px; }
+
+  .tarot-stage { padding-top: 12px; }
+  .tarot-stage h1 { font-size: 43px; }
+  .tarot-spread { width: 100vw; height: min(48vh, 340px); margin-top: 5px; transform: scale(.92); }
+  .tarot-card { width: min(27vw, 132px); top: 12px; }
+  .tarot-card:nth-child(1) { --x: -36vw; }
+  .tarot-card:nth-child(2) { --x: -18vw; }
+  .tarot-card:nth-child(3) { --x: 0px; }
+  .tarot-card:nth-child(4) { --x: 18vw; }
+  .tarot-card:nth-child(5) { --x: 36vw; }
+  .tarot-back, .tarot-face { padding: 9px; box-shadow: 5px 5px 0 var(--ink); }
+  .tarot-back b, .tarot-face b { width: 52px; height: 52px; font-size: 30px; }
+  .tarot-back em { font-size: 11px; }
+
+  .fortune-stage { display: block; height: auto; }
+  .result-visual { display: block; width: min(100%, 360px); height: 92px; margin: 0 auto 12px; }
+  .result-photo { padding: 3px; border-width: 2px; box-shadow: 4px 4px 0 var(--ink); }
+  .result-photo--main { left: 3%; top: 0; width: 41%; height: 100%; }
+  .result-photo--boat { right: auto; left: 34%; top: 5%; width: 34%; height: 82%; }
+  .result-photo--diya { right: 3%; bottom: auto; top: 9%; width: 34%; height: 78%; }
+  .result-card { display: none; }
+  .fortune-paper { width: 100%; padding: 21px 18px; }
+  .fortune-stage h1 { font-size: clamp(31px, 9.5vw, 45px); }
+  .fortune-paper blockquote { margin: 12px 0; }
+  .fortune-nudge { grid-template-columns: 68px 1fr; font-size: 10px; }
+  .result-actions { align-items: stretch; flex-direction: column; gap: 11px; }
+  .result-actions .brutal-button { width: 100%; justify-content: space-between; }
+  .result-actions p { text-align: center; }
+}
+
+@media (max-height: 620px) {
+  .stage-layer { padding-top: 8px; padding-bottom: 70px; }
+  .eyebrow { margin-bottom: 7px; }
+  .intro-stage .stage-copy { padding-block: 19px; }
+  .hesitation { display: none; }
+  .identity-form { gap: 9px; margin-top: 13px; }
+  .date-part span { margin-bottom: 2px; }
+  .date-part select { height: 43px; }
+  .date-part::after { bottom: 13px; }
+  .camera-bezel { aspect-ratio: 1.65; }
+  .privacy-note { display: none; }
+  .tarot-spread { height: 290px; }
+  .fortune-paper blockquote { margin-block: 8px; }
+  .result-visual { height: 72px; margin-bottom: 7px; }
+}
+
+@media (max-width: 380px) {
+  .brand-lockup small { display: none; }
+  .stage-count { display: none; }
+  .camera-stage h1, .scan-stage h1 { font-size: 35px; }
+  .tarot-card:nth-child(1) { --x: -34vw; }
+  .tarot-card:nth-child(2) { --x: -17vw; }
+  .tarot-card:nth-child(4) { --x: 17vw; }
+  .tarot-card:nth-child(5) { --x: 34vw; }
+  .fortune-paper { padding: 17px 14px; }
+}

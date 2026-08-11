@@ -1,0 +1,56 @@
+.app-header {
+  position: absolute;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px clamp(20px, 3.5vw, 54px);
+  border-bottom: var(--border);
+  background: rgba(255, 245, 214, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.brand-lockup { display: flex; align-items: center; gap: 11px; }
+.brand-orb {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--cream);
+  border: var(--border);
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.brand-orb img { width: 112%; height: 112%; display: block; object-fit: cover; transition: transform .3s var(--ease-pop); }
+.brand-lockup:hover .brand-orb img { transform: scale(1.08) rotate(-4deg); }
+
+.brand-lockup b { display: block; font-family: var(--display); font-size: 21px; font-weight: 400; line-height: 1; }
+.brand-lockup small { display: block; margin-top: 3px; font-size: 8px; font-weight: 750; letter-spacing: 0.16em; }
+
+.stage-count { display: flex; align-items: center; gap: 9px; font-size: 11px; font-weight: 790; letter-spacing: 0.08em; }
+.stage-count i { width: 54px; height: 3px; background: var(--ink); }
+
+.progress-rail {
+  position: absolute;
+  z-index: 14;
+  left: 50%;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  display: flex;
+  gap: 18px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.progress-rail span { position: relative; width: 13px; height: 18px; display: grid; place-items: center; outline: 0; pointer-events: auto; }
+.progress-rail span:not(:last-child)::after { position: absolute; left: 19px; width: 19px; height: 3px; content: ''; background: radial-gradient(circle, var(--ink) 0 1px, transparent 1.5px) 0 50% / 7px 3px repeat-x; }
+.progress-rail i { width: 9px; height: 9px; border: 2px solid var(--ink); background: var(--cream); transform: rotate(45deg); transition: .2s var(--ease-pop); }
+.progress-rail b { position: absolute; left: 50%; bottom: 27px; padding: 4px 7px; opacity: 0; color: var(--ink); background: var(--cream); border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink); font-size: 8px; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; transform: translate(-50%, 4px); transition: .18s ease; pointer-events: none; }
+.progress-rail span.is-active i { width: 15px; height: 15px; background: var(--sun); border-color: var(--ink); }
+.progress-rail span.is-done i { background: var(--aqua); }
+.progress-rail span:hover b, .progress-rail span:focus-visible b { opacity: 1; transform: translate(-50%, 0); }
+.progress-rail span:focus-visible i { outline: 3px solid var(--cream); outline-offset: 3px; }

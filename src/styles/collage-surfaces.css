@@ -1,0 +1,72 @@
+/* Paper fasteners belong to interface panels, never to tarot cards. */
+:where(.intro-stage .stage-copy, .profile-stage .stage-copy, .camera-module,
+  .scan-console, .fortune-paper, .result-visual) {
+  position: relative;
+  isolation: isolate;
+  rotate: calc(var(--paper-tilt, 0deg) + var(--run-paper-tilt, 0deg));
+}
+
+.intro-stage .stage-copy { --paper-tilt: -.55deg; }
+.profile-stage .stage-copy { --paper-tilt: .45deg; }
+.camera-module { --paper-tilt: .65deg; }
+.scan-console { --paper-tilt: -.5deg; }
+.fortune-paper { --paper-tilt: -.35deg; }
+.result-visual { --paper-tilt: .45deg; }
+
+/* Opaque paper and a high z-index keep the card border behind the tape. */
+:where(.profile-stage .stage-copy, .camera-module, .fortune-paper)::before {
+  position: absolute;
+  z-index: 30;
+  top: -13px;
+  width: clamp(66px, 8vw, 98px);
+  height: 23px;
+  content: '';
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(104deg, transparent 0 8px, rgba(25, 19, 15, .075) 8px 9px),
+    #f7df91;
+  border: 1px solid rgba(25, 19, 15, .56);
+  box-shadow: 2px 3px 0 rgba(25, 19, 15, .2);
+  clip-path: polygon(3% 3%, 98% 0, 95% 96%, 2% 100%, 0 72%, 3% 49%, 0 25%);
+  transform: translateZ(0) rotate(var(--tape-turn, -4deg));
+}
+
+.profile-stage .stage-copy::before { left: 15%; --tape-turn: -5deg; }
+.camera-module::before { right: 17%; --tape-turn: 4deg; }
+.fortune-paper::before { right: 11%; width: clamp(76px, 9vw, 106px); --tape-turn: 3deg; }
+
+/* Thumbtacks break up the collage rhythm without decorating tarot cards. */
+:where(.intro-stage .stage-copy, .scan-console, .result-visual)::before {
+  position: absolute;
+  z-index: 31;
+  width: 20px;
+  height: 20px;
+  content: '';
+  pointer-events: none;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 28%, #fff8d7 0 9%, #ff7351 12% 43%, #b52e2a 47% 100%);
+  box-shadow: 2px 3px 0 var(--ink), inset -2px -2px 0 rgba(25, 19, 15, .2);
+}
+
+.intro-stage .stage-copy::before { top: -8px; right: 15%; }
+.scan-console::before { top: -9px; left: 11%; background: radial-gradient(circle at 35% 28%, #fff 0 9%, #6de4d8 12% 43%, #267c78 47%); }
+.result-visual::before { top: -7px; left: 13%; background: radial-gradient(circle at 35% 28%, #fff 0 9%, #ffc43c 12% 43%, #b86b13 47%); }
+
+@media (max-width: 700px) {
+  :where(.profile-stage .stage-copy, .camera-module, .fortune-paper)::before {
+    top: -10px;
+    width: 65px;
+    height: 18px;
+  }
+  .camera-module::before { right: 12%; }
+  :where(.intro-stage .stage-copy, .scan-console, .result-visual)::before {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.intro-stage .stage-copy, .profile-stage .stage-copy, .camera-module,
+    .scan-console, .fortune-paper, .result-visual) { transition: none; }
+}

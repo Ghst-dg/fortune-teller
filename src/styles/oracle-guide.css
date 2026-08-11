@@ -1,0 +1,110 @@
+.oracle-guide {
+  --guide-width: clamp(164px, 15vw, 224px);
+  --bubble-width: clamp(126px, 11vw, 154px);
+  position: absolute;
+  z-index: 8;
+  right: clamp(-24px, -1.5vw, -9px);
+  bottom: -24px;
+  width: var(--guide-width);
+  pointer-events: none;
+}
+
+.oracle-guide--side-left { right: auto; left: clamp(-24px, -1.5vw, -9px); }
+.oracle-guide--pose-identity-original,
+.oracle-guide--pose-scanning-original,
+.oracle-guide--pose-tarot-original,
+.oracle-guide--pose-result-original,
+.oracle-guide--pose-mischief-slip,
+.oracle-guide--pose-mischief-detective,
+.oracle-guide--pose-laugh-crown { --guide-width: clamp(176px, 16vw, 238px); }
+.oracle-guide--pose-sideeye-pin { --guide-width: clamp(148px, 13vw, 202px); }
+
+.oracle-guide__art {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: min(43vh, 354px);
+  display: block;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(7px 9px 0 rgba(25, 19, 15, .78));
+  user-select: none;
+}
+
+.oracle-guide__bubble {
+  position: absolute;
+  z-index: 3;
+  top: calc(var(--oracle-content-top, 0px) - 60px);
+  right: clamp(28px, 2.6vw, 40px);
+  width: var(--bubble-width);
+  min-height: 44px;
+  padding: 9px 11px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  border-radius: 0;
+  box-shadow: 6px 6px 0 var(--ink);
+  font-family: var(--display);
+  font-size: clamp(13px, 1.12vw, 17px);
+  line-height: 1.05;
+  text-align: left;
+  pointer-events: auto;
+  cursor: pointer;
+  animation: bubble-pop .28s var(--ease-pop) both;
+  transition: transform .2s var(--ease-pop);
+}
+
+.oracle-guide--side-left .oracle-guide__bubble { right: auto; left: clamp(28px, 2.6vw, 40px); }
+.oracle-guide__bubble::before,
+.oracle-guide__bubble::after { position: absolute; content: ''; pointer-events: none; }
+.oracle-guide__bubble::before {
+  right: 23px;
+  bottom: -22px;
+  width: 27px;
+  height: 24px;
+  background: var(--ink);
+  clip-path: polygon(0 0, 100% 0, 72% 100%);
+}
+.oracle-guide__bubble::after {
+  right: 28px;
+  bottom: -14px;
+  width: 19px;
+  height: 18px;
+  background: var(--cream);
+  clip-path: polygon(0 0, 100% 0, 72% 100%);
+}
+.oracle-guide--side-left .oracle-guide__bubble::before { right: auto; left: 23px; transform: scaleX(-1); }
+.oracle-guide--side-left .oracle-guide__bubble::after { right: auto; left: 28px; transform: scaleX(-1); }
+.oracle-guide__bubble:hover { transform: translateY(-2px) rotate(-.4deg); }
+.oracle-guide__bubble:focus-visible { outline: 4px solid var(--sun); outline-offset: 3px; }
+
+@keyframes bubble-pop {
+  from { opacity: 0; scale: .86; translate: 0 7px; }
+  to { opacity: 1; scale: 1; translate: 0; }
+}
+
+@media (max-width: 920px) {
+  .oracle-guide { --guide-width: 142px; right: -23px; bottom: 28px; }
+  .oracle-guide--side-left { right: auto; left: -23px; }
+  .oracle-guide__art { height: 224px; }
+  .oracle-guide__bubble { top: calc(var(--oracle-content-top, 0px) + 4px); right: calc(100% - 7px); bottom: auto; width: min(146px, 39vw); min-height: 39px; padding: 7px 9px; font-size: 12px; }
+  .oracle-guide--side-left .oracle-guide__bubble { right: auto; left: calc(100% - 7px); }
+  .oracle-guide__bubble::before { right: -19px; bottom: 8px; width: 21px; height: 23px; clip-path: polygon(0 0, 100% 52%, 0 100%); }
+  .oracle-guide__bubble::after { right: -12px; bottom: 11px; width: 15px; height: 17px; clip-path: polygon(0 0, 100% 52%, 0 100%); }
+  .oracle-guide--side-left .oracle-guide__bubble::before { right: auto; left: -19px; }
+  .oracle-guide--side-left .oracle-guide__bubble::after { right: auto; left: -12px; }
+}
+
+@media (max-width: 700px) {
+  .oracle-guide { --guide-width: 88px; right: -12px; bottom: 29px; }
+  .oracle-guide--side-left { right: auto; left: -12px; }
+  .oracle-guide__art { height: 116px; filter: drop-shadow(4px 5px 0 rgba(25, 19, 15, .72)); }
+  .oracle-guide__bubble { width: min(142px, 43vw); min-height: 36px; border-width: 2px; box-shadow: 4px 4px 0 var(--ink); font-size: 11px; }
+}
+
+@media (max-width: 920px) and (max-height: 620px) {
+  .oracle-guide { bottom: 16px; }
+  .oracle-guide__bubble { top: auto; bottom: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .oracle-guide__bubble { animation: none; transition: none; } }

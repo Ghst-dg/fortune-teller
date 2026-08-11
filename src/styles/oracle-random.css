@@ -1,0 +1,33 @@
+.oracle-guide__art {
+  transform: translateX(var(--oracle-nudge, 0)) rotate(var(--oracle-tilt, 0deg));
+  transform-origin: 50% 100%;
+  animation: oracle-arrive-right .56s var(--ease-pop) both;
+  transition: transform .4s var(--ease-pop);
+}
+
+.oracle-guide--side-left .oracle-guide__art { animation-name: oracle-arrive-left; }
+.oracle-guide--pose-mischief-card .oracle-guide__art { object-position: 52% 100%; }
+.oracle-guide--pose-mischief-slip .oracle-guide__art { object-position: 48% 100%; }
+.oracle-guide--pose-mischief-detective .oracle-guide__art { object-position: 50% 100%; }
+.oracle-guide--pose-sideeye-pin .oracle-guide__art { object-position: 48% 100%; }
+.oracle-guide--pose-laugh-crown .oracle-guide__art { object-position: 51% 100%; }
+
+@keyframes oracle-arrive-left {
+  from { opacity: 0; translate: -22px 16px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@keyframes oracle-arrive-right {
+  from { opacity: 0; translate: 22px 16px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@media (hover: hover) {
+  .oracle-guide:has(.oracle-guide__bubble:hover) .oracle-guide__art {
+    transform: translateX(var(--oracle-nudge, 0)) rotate(var(--oracle-tilt, 0deg)) translateY(-2px) scale(1.015);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oracle-guide__art { animation: none; transition: none; }
+}

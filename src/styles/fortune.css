@@ -1,0 +1,63 @@
+.fortune-stage {
+  grid-template-columns: minmax(220px, .46fr) minmax(540px, 1fr);
+  gap: clamp(28px, 4vw, 58px);
+  width: min(1180px, 100%);
+}
+
+.result-visual { position: relative; justify-self: end; width: min(292px, 24vw); height: min(420px, 52vh); }
+.fortune-stage .result-visual::before { display: none; }
+.result-photo { position: absolute; display: block; padding: 5px; background: var(--cream); border: 3px solid var(--ink); box-shadow: 8px 9px 0 var(--ink); transform: translate(var(--collage-x), var(--collage-y)) rotate(var(--collage-tilt)) scale(var(--collage-scale)); transition: transform .35s var(--ease-pop); }
+.result-photo img { width: 100%; height: 100%; display: block; object-fit: cover; filter: saturate(.9) contrast(1.03); }
+.result-photo--main { left: 0; top: 2%; width: 72%; height: 88%; }
+.result-photo--boat { right: 0; top: 7%; width: 49%; height: 37%; }
+.result-photo--diya { right: 2%; bottom: 8%; width: 47%; height: 34%; }
+.result-visual:hover .result-photo--main { transform: translate(var(--collage-x), calc(var(--collage-y) - 4px)) rotate(var(--collage-tilt)) scale(var(--collage-scale)); }
+.result-visual:hover .result-photo--boat { transform: translate(calc(var(--collage-x) + 3px), calc(var(--collage-y) - 3px)) rotate(var(--collage-tilt)) scale(var(--collage-scale)); }
+.result-visual:hover .result-photo--diya { transform: translate(calc(var(--collage-x) + 2px), calc(var(--collage-y) + 3px)) rotate(var(--collage-tilt)) scale(var(--collage-scale)); }
+.result-card {
+  position: absolute;
+  left: 22%;
+  bottom: -8px;
+  width: min(148px, 14vw);
+  aspect-ratio: .64;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px;
+  background: var(--card-color);
+  border: 4px solid var(--ink);
+  box-shadow: 12px 12px 0 var(--ink);
+  transform: rotate(var(--result-tilt, 5deg));
+  animation: result-card-float 4s ease-in-out infinite;
+}
+.result-card::before { position: absolute; inset: 11px; content: ''; border: 2px solid var(--ink); }
+.result-card > * { position: relative; z-index: 1; }
+.result-card small { align-self: flex-start; font-weight: 820; }
+.result-card b { width: 62px; height: 62px; display: grid; place-items: center; background: var(--cream); border: var(--border); border-radius: 50%; font-family: var(--display); font-size: 38px; font-weight: 400; }
+.result-card strong { text-align: center; font-family: var(--display); font-size: 19px; line-height: .95; }
+.result-card em { font-size: 8px; font-style: normal; font-weight: 820; letter-spacing: .09em; }
+
+.fortune-paper { position: relative; max-width: 720px; padding: clamp(26px, 3.4vw, 44px); background: var(--cream); border: 4px solid var(--ink); box-shadow: var(--shadow-lg); }
+.fortune-kicker { width: max-content; margin: 0 0 13px; padding: 5px 8px; color: var(--cream); background: var(--ink); font-size: 9px; font-weight: 820; letter-spacing: .09em; text-transform: uppercase; }
+.fortune-aside { margin: 0 0 9px; color: var(--muted); font-size: 11px; font-weight: 760; }
+.fortune-stage h1 { font-size: clamp(34px, 4.1vw, 57px); line-height: .98; letter-spacing: -.035em; }
+.fortune-prediction { margin: 16px 0; font-size: clamp(14px, 1.45vw, 18px); font-weight: 690; line-height: 1.42; }
+.fortune-combo { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 12px; margin: 0 0 21px; padding: 11px 14px; background: var(--fortune-accent); border: var(--border-thin); box-shadow: var(--shadow-sm); }
+.fortune-combo span { font-size: 8px; font-weight: 850; letter-spacing: .09em; }
+.fortune-combo b { font-size: 11px; font-weight: 760; text-transform: capitalize; }
+
+.result-actions { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.result-actions .brutal-button { min-height: 48px; font-size: 10px; }
+.result-actions .button-arrow { width: 48px; }
+.result-actions p { margin: 0; color: var(--muted); font-size: 9px; }
+.result-actions p b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+@media (max-width: 700px) {
+  .fortune-stage .result-card { left: 43%; bottom: -3px; width: clamp(45px, 14vw, 57px); padding: 5px; border-width: 2px; box-shadow: 4px 4px 0 var(--ink); display: flex; }
+  .fortune-stage .result-card::before { inset: 4px; border-width: 1px; }
+  .fortune-stage .result-card small { font-size: 5px; }
+  .fortune-stage .result-card b { width: 28px; height: 28px; border-width: 1px; font-size: 17px; }
+  .fortune-stage .result-card strong { font-size: 7px; }
+  .fortune-stage .result-card em { display: none; }
+}

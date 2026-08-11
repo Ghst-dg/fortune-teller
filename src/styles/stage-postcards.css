@@ -1,0 +1,94 @@
+.stage-collage {
+  position: absolute;
+  z-index: 2;
+  top: calc(var(--header-height) + clamp(54px, 9vh, 96px));
+  width: clamp(98px, 9vw, 132px);
+  height: clamp(215px, 39vh, 330px);
+  pointer-events: none;
+}
+
+.stage-collage--left { left: clamp(-30px, -1.4vw, -12px); }
+.stage-collage--right { right: clamp(-30px, -1.4vw, -12px); }
+.stage-collage--tarot { top: calc(var(--header-height) + 6vh); }
+
+.stage-collage__card {
+  --card-border-half: 1.5px;
+  position: absolute;
+  display: block;
+  width: 78%;
+  aspect-ratio: .82;
+  padding: 4px;
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  box-shadow: 5px 6px 0 var(--ink);
+  transform: translate(var(--collage-x), var(--collage-y)) rotate(var(--collage-tilt)) scale(var(--collage-scale));
+  animation: collage-card-arrive .55s var(--ease-pop) var(--collage-delay) both;
+}
+
+.stage-collage__card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: saturate(.92) contrast(1.05);
+}
+
+.stage-collage__card--1 { top: 0; left: 3%; }
+.stage-collage__card--2 { top: 31%; right: 0; width: 70%; }
+.stage-collage__card--3 { top: 61%; left: 7%; width: 66%; }
+.stage-collage--right .stage-collage__card--1 { right: 3%; left: auto; }
+.stage-collage--right .stage-collage__card--2 { right: auto; left: 0; }
+.stage-collage--right .stage-collage__card--3 { right: 7%; left: auto; }
+.stage-collage[data-count='1'] .stage-collage__card { top: 23%; width: 88%; }
+.stage-collage[data-count='2'] .stage-collage__card--1 { top: 12%; width: 82%; }
+.stage-collage[data-count='2'] .stage-collage__card--2 { top: 55%; width: 75%; }
+
+.stage-collage__fastener {
+  position: absolute;
+  z-index: 3;
+  left: var(--fastener-x);
+  display: block;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(var(--fastener-turn));
+}
+.result-photo { --card-border-half: 1.5px; }
+.stage-collage__fastener--top { top: calc(0% - var(--card-border-half)); }
+.stage-collage__fastener--bottom { top: calc(100% + var(--card-border-half)); }
+.stage-collage__fastener--pin {
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 28%, #fff 0 9%, var(--fastener-color) 13% 48%, var(--ink) 53%);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.stage-collage__fastener--tape {
+  width: 48px;
+  height: 17px;
+  border: 1px solid rgba(25, 19, 15, .58);
+  background: repeating-linear-gradient(105deg, transparent 0 8px, #19130f12 8px 9px), #f7df91;
+  clip-path: polygon(3% 3%, 98% 0, 95% 96%, 2% 100%, 0 70%, 3% 48%, 0 24%);
+}
+
+@keyframes collage-card-arrive {
+  from { opacity: 0; translate: 0 18px; scale: .9; }
+  to { opacity: 1; translate: 0; scale: 1; }
+}
+
+@media (max-width: 920px) {
+  .stage-collage { top: calc(var(--header-height) + 36px); width: 94px; height: 235px; opacity: .9; }
+  .stage-collage--left { left: -36px; }
+  .stage-collage--right { right: -36px; }
+}
+
+@media (max-width: 700px) {
+  .stage-collage { top: calc(var(--header-height) + 24px); width: 72px; height: 180px; opacity: .78; }
+  .stage-collage--left { left: -29px; }
+  .stage-collage--right { right: -29px; }
+  .stage-collage__card, .result-photo { --card-border-half: 1px; }
+  .stage-collage__card { padding: 2px; border-width: 2px; box-shadow: 3px 4px 0 var(--ink); }
+  .stage-collage__fastener--tape { width: 34px; height: 12px; }
+  .stage-collage__fastener--pin { width: 12px; height: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .stage-collage__card { animation: none; } }

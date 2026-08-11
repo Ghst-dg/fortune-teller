@@ -1,0 +1,35 @@
+.brutal-button {
+  min-height: 58px;
+  display: inline-flex;
+  align-items: stretch;
+  padding: 0;
+  border: var(--border);
+  background: var(--sun);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 820;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.brutal-button > span:first-child { display: flex; align-items: center; padding: 0 22px; }
+.brutal-button--pink { background: var(--pink); }
+.brutal-button--cream { background: var(--cream); }
+.brutal-button--aqua { background: var(--aqua); }
+.button-arrow { width: 56px; display: grid; place-items: center; border-left: var(--border); font-size: 20px; }
+.brutal-button:hover { transform: translate(3px, 3px); box-shadow: 4px 4px 0 var(--ink); }
+.brutal-button:active { transform: translate(7px, 7px); box-shadow: none; }
+.brutal-button:focus-visible, .text-button:focus-visible, input:focus-visible { outline: 4px solid var(--white); outline-offset: 4px; }
+
+.text-button {
+  padding: 9px 5px;
+  border: 0;
+  border-bottom: 2px solid var(--ink);
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 760;
+}
+.text-button:hover { color: var(--pink); border-color: var(--pink); }

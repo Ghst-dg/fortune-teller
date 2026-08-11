@@ -1,0 +1,50 @@
+.intro-stage .stage-copy {
+  padding: clamp(24px, 3.5vw, 46px);
+  background: rgba(255, 245, 214, 0.9);
+  border: var(--border);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(9px);
+}
+
+.intro-stage h1 { max-width: 620px; }
+.intro-actions { display: flex; align-items: center; gap: 24px; margin-top: 32px; }
+.hesitation { min-height: 18px; margin: 19px 0 0; color: var(--muted); font-size: 12px; font-weight: 650; }
+.profile-stage { justify-items: start; }
+.profile-stage .stage-copy {
+  width: min(540px, 100%);
+  padding: clamp(24px, 3.2vw, 40px);
+  background: var(--cream);
+  border: var(--border);
+  box-shadow: var(--shadow-lg);
+  transition: transform .3s var(--ease-pop), box-shadow .3s var(--ease-pop);
+}
+.profile-stage:has(input:focus, select:focus) .stage-copy { transform: rotate(-.35deg); box-shadow: 13px 13px 0 var(--ink); }
+.profile-stage h1 { font-size: clamp(48px, 5.8vw, 78px); }
+.identity-form { display: grid; gap: 17px; margin-top: 25px; }
+.identity-form > label > span, .date-selector legend { display: block; margin-bottom: 7px; padding: 0; font-size: 11px; font-weight: 780; letter-spacing: 0.06em; text-transform: uppercase; }
+.identity-form input, .date-part select {
+  width: 100%;
+  height: 52px;
+  padding: 0 15px;
+  color: var(--ink);
+  background: var(--white);
+  border: var(--border);
+  border-radius: 0;
+  outline: 0;
+  font-size: 17px;
+  font-weight: 650;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.identity-form input::placeholder { color: #8a7969; opacity: 0.8; }
+.identity-form input:focus, .date-part select:focus { background-color: #fff9e8; box-shadow: 4px 4px 0 var(--ink); }
+.date-part select:focus-visible { outline: 4px solid var(--white); outline-offset: 4px; }
+
+.date-selector { min-width: 0; margin: 0; padding: 0; border: 0; }
+.date-selects { display: grid; grid-template-columns: .8fr 1.15fr 1fr; gap: 9px; }
+.date-part { position: relative; min-width: 0; }
+.date-part span { display: block; margin-bottom: 4px; color: var(--muted); font-size: 8px; font-weight: 780; letter-spacing: .08em; text-transform: uppercase; }
+.date-part::after { position: absolute; right: 11px; bottom: 17px; content: '↓'; pointer-events: none; font-size: 11px; font-weight: 900; }
+.date-part select { appearance: none; padding: 0 28px 0 11px; cursor: pointer; font-size: 15px; font-variant-numeric: tabular-nums; }
+.date-selector.is-invalid select { border-color: #a63d2e; }
+.form-error { min-height: 16px; margin: -5px 0 0; color: #7a382c; font-size: 10px; font-weight: 690; }
+.identity-form .brutal-button { justify-self: start; }

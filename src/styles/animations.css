@@ -1,0 +1,63 @@
+@keyframes stage-arrive {
+  from { opacity: 0; transform: translateY(32px) scale(.985); filter: blur(7px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+@keyframes tarot-riffle {
+  0%, 100% { transform: translateX(-50%) translateY(calc(var(--deck-y) + var(--deck-offset))) rotate(0); }
+  30% { transform: translateX(calc(-50% + var(--riffle-x))) translateY(calc(var(--deck-y) - 8px + var(--deck-offset))) rotate(var(--riffle-rot)); }
+  62% { transform: translateX(calc(-50% + var(--riffle-cross))) translateY(calc(var(--deck-y) - 2px + var(--deck-offset))) rotate(0); }
+}
+@keyframes tarot-cut-deck {
+  0%, 100% { transform: translateX(-50%) translateY(calc(var(--deck-y) + var(--deck-offset))) rotate(0); }
+  42% { transform: translateX(calc(-50% + var(--cut-x))) translateY(var(--cut-y)) rotate(var(--cut-rot)); }
+  68% { transform: translateX(calc(-50% + var(--cut-x))) translateY(var(--cut-return-y)) rotate(var(--cut-rot)); }
+}
+@keyframes tarot-deal-card {
+  0% { transform: translateX(-50%) translateY(calc(var(--deck-y) + var(--deck-offset))) rotate(0) scale(.97); }
+  68% { transform: translateX(calc(-50% + var(--x))) translateY(calc(var(--y) - 20px)) rotate(var(--rot)) scale(1.02); }
+  100% { transform: translateX(calc(-50% + var(--x))) translateY(var(--y)) rotate(var(--rot)) scale(1); }
+}
+@keyframes tarot-scan-card {
+  0%, 100% { opacity: 0; transform: scale(.96); }
+  42%, 68% { opacity: 1; transform: scale(1.02); }
+}
+@keyframes tarot-scan-lift {
+  0%, 100% { transform: translateY(0); filter: brightness(1); }
+  50% { transform: translateY(-8px); filter: brightness(1.18); }
+}
+@keyframes grain-shift {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(2%, -3%); }
+  50% { transform: translate(-3%, 2%); }
+  75% { transform: translate(3%, 4%); }
+  100% { transform: translate(-2%, -3%); }
+}
+@keyframes camera-sweep {
+  0%, 100% { top: 9%; opacity: .45; }
+  50% { top: 90%; opacity: 1; }
+}
+@keyframes status-pulse {
+  50% { transform: scale(.72); opacity: .55; }
+}
+@keyframes guide-lock {
+  0% { transform: translate(-50%, -43%) scale(1.15); opacity: .3; }
+  100% { transform: translate(-50%, -43%) scale(1); opacity: 1; }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes map-line-draw {
+  from { width: 0; opacity: 0; }
+}
+@keyframes node-pop {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(2.5); }
+}
+@keyframes result-card-float {
+  0%, 100% { transform: rotate(5deg) translateY(0); }
+  50% { transform: rotate(3deg) translateY(-10px); }
+}
+@keyframes card-target-pulse {
+  to { box-shadow: 0 0 0 5px var(--sun), 9px 9px 0 var(--ink); filter: brightness(1.14); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

@@ -1,0 +1,38 @@
+.scan-stage .stage-copy {
+  color: var(--cream);
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: minmax(270px, .65fr) minmax(500px, 1.35fr);
+  grid-template-areas: 'eyebrow console' 'title console' 'caption console';
+  column-gap: clamp(30px, 5vw, 68px);
+  align-items: center;
+}
+.scan-stage .eyebrow { grid-area: eyebrow; align-self: end; color: var(--cream); text-shadow: 1px 1px var(--ink); }
+.scan-stage h1 { grid-area: title; color: var(--cream); font-size: clamp(48px, 5.3vw, 76px); text-shadow: 4px 4px 0 var(--ink); }
+
+.scan-console { grid-area: console; display: grid; grid-template-columns: minmax(280px, 1fr) 180px; padding: 12px; color: var(--cream); background: var(--ink); border: 3px solid var(--cream); box-shadow: 10px 10px 0 var(--ink); transform: rotate(-.5deg); }
+.scan-portrait { position: relative; aspect-ratio: 1; overflow: hidden; background-position: center; background-size: cover; border: 2px solid var(--aqua); filter: saturate(.55) contrast(1.16); }
+.scan-portrait::after { position: absolute; inset: 0; content: ''; background: linear-gradient(135deg, rgba(88,216,202,.22), rgba(41,32,68,.15)); mix-blend-mode: screen; }
+.scan-portrait.is-demo { display: grid; place-items: center; background: radial-gradient(circle, #d59067 0 25%, #55374c 65%, #221a35); }
+.scan-portrait.is-demo::before { content: '✋'; font-size: clamp(120px, 18vw, 210px); filter: grayscale(.2) sepia(.25); transform: rotate(-8deg); }
+
+.scan-data { display: grid; align-content: stretch; border: 2px solid var(--aqua); border-left: 0; }
+.scan-data p { display: flex; flex-direction: column; justify-content: center; gap: 4px; margin: 0; padding: 10px; color: var(--cream); border-bottom: 1px solid rgba(88,216,202,.45); }
+.scan-data p:last-child { border-bottom: 0; }
+.scan-data span { color: var(--aqua); font-size: 7px; font-weight: 780; letter-spacing: .14em; }
+.scan-data b { color: var(--cream); font-size: 9px; line-height: 1.2; }
+
+.palm-map { position: absolute; z-index: 2; inset: 0; }
+.palm-grid { position: absolute; inset: 0; opacity: .27; background-image: linear-gradient(rgba(88,216,202,.45) 1px, transparent 1px), linear-gradient(90deg, rgba(88,216,202,.45) 1px, transparent 1px); background-size: 9% 9%; }
+.map-line { position: absolute; left: var(--x); top: var(--y); width: var(--w); height: 2px; background: var(--lime); transform: rotate(var(--angle)); transform-origin: left; box-shadow: 0 0 6px var(--lime); animation: map-line-draw .6s var(--delay) both; }
+.map-line b { position: absolute; left: 35%; bottom: 5px; color: var(--lime); font: 6px var(--body); letter-spacing: .1em; white-space: nowrap; }
+.map-node { position: absolute; left: var(--x); top: var(--y); width: 17px; height: 17px; display: grid; place-items: center; color: var(--ink); background: var(--aqua); border: 1px solid var(--ink); border-radius: 50%; font-size: 6px; font-weight: 800; transform: translate(-50%, -50%); animation: node-pop .35s var(--delay) both; }
+.map-reticle { position: absolute; left: 50%; top: 51%; width: 35%; aspect-ratio: 1; border: 1px solid var(--aqua); border-radius: 50%; transform: translate(-50%, -50%); }
+.map-reticle i { position: absolute; background: var(--aqua); }
+.map-reticle i:first-child { left: 50%; top: -12%; width: 1px; height: 124%; }
+.map-reticle i:last-child { left: -12%; top: 50%; width: 124%; height: 1px; }
+.map-progress { position: absolute; inset: 0; clip-path: inset(calc(100% - var(--scan-progress)) 0 0); background: rgba(88,216,202,.12); border-top: 2px solid var(--aqua); transition: clip-path .1s linear; }
+
+.scan-caption { grid-area: caption; align-self: end; width: 100%; min-width: 0; display: grid; grid-template-columns: 82px minmax(0, 1fr); align-items: stretch; margin-top: 25px; overflow: hidden; color: var(--cream); background: #172029; border: 3px solid var(--cream); box-shadow: var(--shadow-md); }
+.scan-caption span { min-width: 0; display: grid; place-items: center; padding: 12px 5px; overflow: hidden; color: var(--ink); background: var(--aqua); border-right: 3px solid var(--cream); font-family: var(--display); font-size: 21px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scan-caption p { margin: 0; padding: 10px; color: var(--cream); font-size: 10px; font-weight: 760; letter-spacing: .03em; }

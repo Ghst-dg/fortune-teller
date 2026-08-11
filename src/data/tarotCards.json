@@ -1,0 +1,42 @@
+[
+  {
+    "id": "green-build",
+    "number": "I",
+    "name": "The Green Build",
+    "symbol": "✓",
+    "micro": "FIRST TRY ENERGY",
+    "color": "lime"
+  },
+  {
+    "id": "rubber-duck",
+    "number": "II",
+    "name": "The Rubber Duck",
+    "symbol": "?",
+    "micro": "SAY IT OUT LOUD",
+    "color": "gold"
+  },
+  {
+    "id": "chai-break",
+    "number": "III",
+    "name": "The Chai Break",
+    "symbol": "≈",
+    "micro": "REST IS RESEARCH",
+    "color": "coral"
+  },
+  {
+    "id": "tiny-pr",
+    "number": "IV",
+    "name": "The Tiny PR",
+    "symbol": "+",
+    "micro": "SMALL BUT MIGHTY",
+    "color": "aqua"
+  },
+  {
+    "id": "great-undo",
+    "number": "V",
+    "name": "The Great Undo",
+    "symbol": "↶",
+    "micro": "MISTAKES HAVE EXITS",
+    "color": "violet"
+  }
+]

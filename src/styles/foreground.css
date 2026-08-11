@@ -1,0 +1,37 @@
+.foreground-frame {
+  --foreground-x: 0px;
+  --foreground-y: 0px;
+  --foreground-soft-x: 0px;
+  --foreground-soft-y: 0px;
+  position: absolute;
+  z-index: 4;
+  inset: var(--header-height) 0 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.foreground__near,
+.foreground__soft { position: absolute; will-change: transform; transition: transform .28s ease-out; }
+.foreground__near { transform: translate3d(var(--foreground-x), var(--foreground-y), 0); }
+.foreground__soft { transform: translate3d(var(--foreground-soft-x), var(--foreground-soft-y), 0); }
+
+.market-awning { top: -20px; width: min(38vw, 500px); height: 76px; border: var(--border); box-shadow: 0 8px 0 rgba(25, 19, 15, .28); background-color: #54234e; background-image: linear-gradient(90deg, rgba(34, 25, 68, .18), rgba(190, 55, 83, .28)), url('/textures/banarasi-brocade.webp'); background-position: center; background-size: auto, 180%; }
+.market-awning::after { position: absolute; inset: 12px 0; content: ''; border-block: 3px solid var(--ink); background: linear-gradient(90deg, transparent, rgba(255, 224, 118, .32), transparent); }
+.market-awning--left { left: -24px; transform-origin: left top; rotate: -2deg; }
+.market-awning--right { right: -24px; transform-origin: right top; rotate: 2deg; }
+
+.street-balcony { top: 0; right: -20px; width: min(37vw, 440px); height: 72px; border: var(--border); background: #46a7a6; box-shadow: 0 9px 0 rgba(25, 19, 15, .32); }
+.street-balcony i { position: relative; display: inline-block; width: 13%; height: 74px; margin-left: 9%; border-inline: 4px solid var(--ink); background: repeating-linear-gradient(90deg, transparent 0 7px, rgba(255, 245, 214, .55) 7px 10px); }
+.street-jali { top: 15vh; left: -46px; width: clamp(88px, 13vw, 174px); height: 55vh; border: var(--border); background: linear-gradient(45deg, transparent 42%, #19130f 43% 51%, transparent 52%) 0 0 / 34px 34px, linear-gradient(-45deg, transparent 42%, #19130f 43% 51%, transparent 52%) 0 0 / 34px 34px, #d46044; box-shadow: 9px 8px 0 rgba(25, 19, 15, .35); rotate: -1.5deg; }
+.street-shutter { right: -30px; bottom: 5vh; width: clamp(58px, 8vw, 116px); height: 42vh; padding: 12px; border: var(--border); background: repeating-linear-gradient(#2e6c82 0 14px, #19130f 14px 17px); box-shadow: -7px 7px 0 rgba(25, 19, 15, .3); }
+.street-shutter i { display: block; width: 11px; height: 11px; margin: 24px auto; border: 2px solid var(--ink); border-radius: 50%; background: #ffb000; }
+.street-wire { top: 12vh; left: 8vw; width: 52vw; height: 2px; border-top: 3px solid var(--ink); rotate: -4deg; }
+.street-wire i { position: absolute; top: -7px; width: 13px; height: 13px; border: 2px solid var(--ink); border-radius: 50%; background: #ffb000; }
+.street-wire i:first-child { left: 31%; } .street-wire i:last-child { left: 72%; }
+
+@media (max-width: 700px) {
+  .market-awning { width: 43vw; height: 54px; }
+  .street-jali { left: -70px; width: 128px; opacity: .9; } .street-balcony { width: 44vw; height: 49px; } .street-shutter { right: -54px; width: 102px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .foreground__near, .foreground__soft { transition: none; transform: none; } }

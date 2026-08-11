@@ -1,0 +1,86 @@
+/* Wide but shallow windows prioritize vertical fit inside the fixed stage. */
+@media (min-width: 921px) and (max-height: 820px) {
+  :root { --header-height: 74px; }
+  .app-header { padding: 10px clamp(28px, 3vw, 48px); }
+  .brand-orb { width: 42px; height: 42px; } .brand-lockup b { font-size: 19px; }
+  .brand-lockup small { font-size: 7px; } .stage-count { font-size: 10px; }
+  .stage-layer { padding: 10px clamp(38px, 4vw, 68px) 54px; }
+  .stage { width: min(1180px, 100%); height: 100%; }
+  .stage-copy { max-width: 650px; } .stage h1 { font-size: clamp(50px, 4.6vw, 70px); }
+  .eyebrow { margin-bottom: 8px; font-size: 10px; }
+  .intro-stage .stage-copy { width: min(650px, 100%); padding: 24px 30px; }
+  .intro-actions { margin-top: 20px; } .hesitation { display: none; }
+  .profile-stage .stage-copy { width: min(500px, 100%); padding: 22px 26px; } .profile-stage h1 { font-size: 58px; }
+  .identity-form { gap: 10px; margin-top: 13px; } .identity-form input, .date-part select { height: 44px; }
+  .date-part::after { bottom: 13px; } .brutal-button { min-height: 50px; font-size: 11px; }
+  .camera-stage .stage-copy, .scan-stage .stage-copy { width: 100%; max-width: 1080px; grid-template-columns: minmax(240px, .7fr) minmax(430px, 1.3fr); column-gap: 38px; }
+  .camera-stage h1, .scan-stage h1 { font-size: 58px; }
+  .camera-module { justify-self: end; max-width: 540px; padding: 8px; } .camera-bezel { aspect-ratio: 1.55; }
+  .camera-readout { min-height: 44px; padding-block: 5px; } .camera-fallback { min-height: 42px; margin-block: 7px 3px; } .privacy-note { display: none; }
+  .scan-console { justify-self: end; width: min(620px, 100%); grid-template-columns: minmax(300px, 1fr) 150px; padding: 8px; }
+  .scan-caption { margin-top: 10px; grid-template-columns: 72px minmax(0, 1fr); }
+  .scan-caption span { padding: 8px 4px; font-size: 18px; } .scan-caption p { padding: 7px; font-size: 8px; }
+  .tarot-stage { padding-top: 0; } .tarot-stage h1 { font-size: 56px; }
+  .tarot-spread { width: min(850px, 82vw); height: 340px; margin-top: 0; } .tarot-card { top: 8px; width: 135px; }
+  .fortune-stage { width: min(1100px, 100%); grid-template-columns: 250px minmax(0, 1fr); gap: 34px; }
+  .result-visual { width: 250px; height: 340px; } .result-card { width: 120px; }
+  .fortune-paper { max-width: 690px; padding: 24px 28px; } .fortune-stage h1 { font-size: 50px; }
+  .fortune-prediction { margin-block: 10px; font-size: 14px; } .fortune-combo { margin-bottom: 14px; padding-block: 8px; }
+  .oracle-guide { --guide-width: 160px; --bubble-width: 138px; bottom: 16px; }
+  .oracle-guide__art { height: 240px; } .oracle-guide__bubble { top: calc(var(--oracle-content-top, 0px) - 48px); padding: 7px 9px; font-size: 13px; }
+  .stage-collage { top: calc(var(--header-height) + 30px); width: 104px; height: 240px; } .progress-rail { bottom: 7px; gap: 18px; }
+  .progress-rail span:not(:last-child)::after { left: 19px; width: 19px; }
+  .market-awning { height: 58px; } .street-balcony { height: 56px; }
+  .street-jali { height: min(52vh, 360px); } .street-shutter { height: min(38vh, 280px); }
+  .stage-transition__brocade { height: 62px; }
+}
+
+@media (min-width: 921px) and (max-height: 680px) {
+  :root { --header-height: 64px; }
+  .stage-layer { padding-block: 6px 44px; } .stage h1 { font-size: 52px; }
+  .intro-stage .stage-copy, .profile-stage .stage-copy, .fortune-paper { padding-block: 17px; }
+  .camera-module { max-width: 480px; } .camera-bezel { aspect-ratio: 1.75; }
+  .scan-console { width: 540px; grid-template-columns: 1fr 130px; }
+  .tarot-spread { height: 270px; } .tarot-card { width: 112px; }
+  .result-visual { width: 215px; height: 260px; }
+  .oracle-guide { --guide-width: 128px; bottom: 10px; } .oracle-guide__art { height: 175px; }
+  .stage-collage { width: 82px; height: 185px; }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) and (max-height: 820px) {
+  .stage { width: min(1080px, calc(100% - 300px)); }
+  .fortune-stage { width: min(1040px, 100%); }
+}
+
+/* True 4K: coordinated scaling inside a 3000px decorative rail. */
+@media (min-width: 3200px) and (min-height: 1800px) {
+  :root { --header-height: 132px; }
+  .app-header { padding-inline: max(84px, calc((100vw - 3000px) / 2)); }
+  .brand-orb { width: 68px; height: 68px; } .brand-lockup b { font-size: 32px; }
+  .brand-lockup small { font-size: 11px; } .stage-count { font-size: 15px; } .stage-count i { width: 82px; }
+  .stage-layer { padding: 52px max(110px, calc((100vw - 1900px) / 2)) 120px; }
+  .stage { width: min(1800px, 100%); height: min(1120px, 100%); }
+  .intro-stage .stage-copy { width: min(1000px, 100%); padding: 68px; } .intro-stage h1 { max-width: 900px; font-size: 150px; }
+  .profile-stage .stage-copy { width: min(760px, 100%); padding: 58px; } .profile-stage h1 { font-size: 110px; }
+  .identity-form input, .date-part select { height: 68px; } .brutal-button { min-height: 72px; font-size: 16px; }
+  .camera-stage .stage-copy, .scan-stage .stage-copy { max-width: 1750px; grid-template-columns: 420px minmax(850px, 1fr); column-gap: 110px; }
+  .camera-stage h1, .scan-stage h1 { font-size: 112px; }
+  .camera-module { max-width: 950px; padding: 18px; } .camera-readout { min-height: 74px; }
+  .scan-console { width: min(1000px, 100%); grid-template-columns: minmax(560px, 1fr) 260px; padding: 18px; }
+  .tarot-stage h1 { font-size: 106px; } .tarot-spread { width: 1400px; height: 700px; } .tarot-card { width: 245px; }
+  .tarot-card:nth-child(1) { --x: -490px; } .tarot-card:nth-child(2) { --x: -245px; }
+  .tarot-card:nth-child(4) { --x: 245px; } .tarot-card:nth-child(5) { --x: 490px; }
+  .fortune-stage { width: min(1750px, 100%); grid-template-columns: 470px minmax(900px, 1fr); gap: 100px; }
+  .result-visual { width: 470px; height: 680px; } .result-card { width: 220px; }
+  .fortune-paper { max-width: 1000px; padding: 68px; } .fortune-stage h1 { font-size: 84px; } .fortune-prediction { font-size: 22px; }
+  .stage-collage { top: calc(var(--header-height) + clamp(140px, 12vh, 260px)); width: 230px; height: 540px; }
+  .stage-collage--left { left: max(24px, calc((100vw - 3000px) / 2)); } .stage-collage--right { right: max(24px, calc((100vw - 3000px) / 2)); }
+  .oracle-guide { --guide-width: 360px; --bubble-width: 240px; right: max(18px, calc((100vw - 3000px) / 2)); bottom: clamp(120px, calc((100dvh - var(--header-height) - 1120px) / 2), 420px); }
+  .oracle-guide--side-left { right: auto; left: max(18px, calc((100vw - 3000px) / 2)); } .oracle-guide__art { height: 590px; }
+  .oracle-guide__bubble { padding: 14px 17px; font-size: 22px; }
+  .progress-rail { bottom: 28px; gap: 32px; } .progress-rail span { width: 20px; height: 26px; }
+  .progress-rail span:not(:last-child)::after { left: 27px; width: 34px; }
+  .stage-transition__brocade { height: 150px; background-size: auto, 520px auto, auto; } .stage-transition__ripples { width: 1100px; height: 120px; }
+  .market-awning { width: min(28vw, 700px); height: 112px; } .street-balcony { width: min(27vw, 640px); height: 104px; }
+  .street-jali { width: 240px; height: 760px; } .street-shutter { width: 154px; height: 590px; }
+}

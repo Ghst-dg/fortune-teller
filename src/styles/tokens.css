@@ -1,0 +1,31 @@
+:root {
+  --ink: #19130f;
+  --cream: #fff5d6;
+  --paper: #f5dfad;
+  --sun: #ffb000;
+  --coral: #ff6542;
+  --pink: #f04f87;
+  --aqua: #58d8ca;
+  --river: #245a70;
+  --indigo: #292044;
+  --violet: #775bd2;
+  --lime: #b8f34a;
+  --white: #fffdf4;
+  --muted: #6e5a4b;
+  --border: 3px solid var(--ink);
+  --border-thin: 2px solid var(--ink);
+  --shadow-sm: 4px 4px 0 var(--ink);
+  --shadow-md: 7px 7px 0 var(--ink);
+  --shadow-lg: 11px 11px 0 var(--ink);
+  --display: 'Yatra One', 'Nirmala UI', sans-serif;
+  --body: 'Space Grotesk Variable', 'Nirmala UI', sans-serif;
+  --ease-pop: cubic-bezier(0.16, 1, 0.3, 1);
+  --header-height: 88px;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --header-height: 70px;
+    --shadow-lg: 7px 7px 0 var(--ink);
+  }
+}

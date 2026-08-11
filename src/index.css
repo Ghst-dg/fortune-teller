@@ -1,0 +1,23 @@
+/* Feature sheets are kept explicit so Vite can invalidate each visual layer cleanly. */
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/stage-moods.css';
+@import './styles/chrome.css';
+@import './styles/foreground.css';
+@import './styles/stage-postcards.css';
+@import './styles/controls.css';
+@import './styles/oracle-guide.css';
+@import './styles/oracle-random.css';
+@import './styles/intro-profile.css';
+@import './styles/camera.css';
+@import './styles/palm-guide.css';
+@import './styles/scan.css';
+@import './styles/tarot.css';
+@import './styles/fortune.css';
+@import './styles/collage-surfaces.css';
+@import './styles/tarot-texture.css';
+@import './styles/animations.css';
+@import './styles/stage-transitions.css';
+@import './styles/responsive.css';
+@import './styles/large-screen.css';
+@import './styles/extreme-screens.css';

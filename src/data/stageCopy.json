@@ -1,0 +1,38 @@
+{
+  "welcome": [
+    { "eyebrow": "Mithu heard something", "title": "Want tomorrow’s gossip?", "caption": "The parrot already peeked." },
+    { "eyebrow": "Fresh from the galis", "title": "Shall we bother destiny?", "caption": "No appointment. Excellent." },
+    { "eyebrow": "One tiny prophecy", "title": "Future, with extra masala?", "caption": "Mithu promises mild chaos." },
+    { "eyebrow": "Psst. Come closer", "title": "Want fate’s group chat?", "caption": "Someone left it unmuted." }
+  ],
+  "identity": [
+    { "eyebrow": "01 · Roll call", "title": "Name this timeline.", "caption": "This session only." },
+    { "eyebrow": "01 · Before the drama", "title": "Who is tempting fate?", "caption": "Name and birthday. Easy." },
+    { "eyebrow": "01 · Mithu’s register", "title": "Add your plot details.", "caption": "Nothing leaves this session." },
+    { "eyebrow": "01 · Hero entry", "title": "Introduce the main character.", "caption": "A name. A birthday. Done." }
+  ],
+  "palm": [
+    { "eyebrow": "02 · Hand over evidence", "title": "Right palm, please.", "caption": "Local only · erased on reset" },
+    { "eyebrow": "02 · Tiny hand audit", "title": "Right-hand high-five.", "caption": "No uploads · erased on reset" },
+    { "eyebrow": "02 · Mithu is squinting", "title": "Show your right palm.", "caption": "Your frame stays local · reset erases it" },
+    { "eyebrow": "02 · Five-finger forecast", "title": "Right palm. Hold steady.", "caption": "Camera frame stays local · reset erases it" }
+  ],
+  "scanning": [
+    { "eyebrow": "03 · Scientific-ish", "title": "Your lines are snitching.", "caption": "TAB COLLECTOR" },
+    { "eyebrow": "03 · Palm.exe running", "title": "Mithu found a subplot.", "caption": "CHAOS CAPABLE" },
+    { "eyebrow": "03 · Chai-powered vision", "title": "Scanning the good gossip.", "caption": "BUG RESISTANT" },
+    { "eyebrow": "03 · Extremely advanced", "title": "Counting future wins.", "caption": "KEYBOARD HERO" }
+  ],
+  "tarot": [
+    { "eyebrow": "04 · Fate deals", "title": "Mithu picks. You breathe.", "caption": "No tapping. Parrot rules." },
+    { "eyebrow": "04 · Deck in session", "title": "Five cards enter…", "caption": "One leaves with gossip." },
+    { "eyebrow": "04 · Random means random", "title": "Let the deck misbehave.", "caption": "Mithu claims neutrality." },
+    { "eyebrow": "04 · Card drama", "title": "The spread knows something.", "caption": "Hands off. Eyes wide." }
+  ],
+  "result": [
+    { "eyebrow": "05 · Gossip delivered", "title": "Mithu checked twice.", "caption": "MITHU’S LUCKY COMBO" },
+    { "eyebrow": "05 · Fate has receipts", "title": "This one is oddly specific.", "caption": "MITHU’S VERY LUCKY COMBO" },
+    { "eyebrow": "05 · Fresh prediction", "title": "The parrot stands by it.", "caption": "MITHU’S POCKET-SIZED LUCKY COMBO" },
+    { "eyebrow": "05 · Timeline update", "title": "Good news with feathers.", "caption": "MITHU’S SUSPICIOUSLY LUCKY COMBO" }
+  ]
+}
