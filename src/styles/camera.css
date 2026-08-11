@@ -6,8 +6,18 @@
   column-gap: clamp(30px, 5vw, 72px);
   align-items: center;
 }
-.camera-stage .eyebrow { grid-area: eyebrow; align-self: end; }
-.camera-stage h1 { grid-area: title; font-size: clamp(50px, 5.6vw, 80px); }
+.camera-stage .eyebrow {
+  grid-area: eyebrow;
+  align-self: end;
+  color: var(--cream);
+  text-shadow: 1px 1px 0 var(--ink);
+}
+.camera-stage h1 {
+  grid-area: title;
+  color: var(--cream);
+  font-size: clamp(50px, 5.6vw, 80px);
+  text-shadow: 4px 4px 0 var(--ink);
+}
 .camera-module { grid-area: camera; width: 100%; padding: 12px; background: var(--cream); border: var(--border); box-shadow: var(--shadow-lg); transform: rotate(0.8deg); }
 
 .camera-bezel {
