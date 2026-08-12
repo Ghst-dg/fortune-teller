@@ -32,6 +32,7 @@
   .progress-rail span:not(:last-child)::after { left: 19px; width: 19px; }
   .market-awning { height: 58px; } .street-balcony { height: 56px; }
   .street-jali { height: min(52vh, 360px); } .street-shutter { height: min(38vh, 280px); }
+  .stage-transition__brocade { height: 62px; }
 }
 
 @media (min-width: 921px) and (max-height: 680px) {
@@ -79,6 +80,7 @@
   .oracle-guide__bubble { padding: 14px 17px; font-size: 22px; }
   .progress-rail { bottom: 28px; gap: 32px; } .progress-rail span { width: 20px; height: 26px; }
   .progress-rail span:not(:last-child)::after { left: 27px; width: 34px; }
+  .stage-transition__brocade { height: 150px; background-size: auto, 520px auto, auto; } .stage-transition__ripples { width: 1100px; height: 120px; }
   .market-awning { width: min(28vw, 700px); height: 112px; } .street-balcony { width: min(27vw, 640px); height: 104px; }
   .street-jali { width: 240px; height: 760px; } .street-shutter { width: 154px; height: 590px; }
 }

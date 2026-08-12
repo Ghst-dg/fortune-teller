@@ -1,92 +1,92 @@
 [
   {
     "id": "green-build-blinks", "cardId": "green-build",
-    "headline": "The first try works",
-    "fortune": "Before Thursday's chai gets cold, one thing you worried about goes right on the first try. Enjoy the suspicious peace.",
-    "lucky": { "number": "07", "color": "Fresh lime", "hex": "#b8f34a", "moment": "10:42 AM", "snack": "samosa", "key": "marigold" }
+    "headline": "The build blinks first",
+    "fortune": "Before Thursday’s chai cools, a build you expected to babysit turns green on its first run. Do not make eye contact; it may notice.",
+    "lucky": { "number": "07", "color": "Neon lime", "hex": "#b8f34a", "moment": "10:42 AM", "snack": "samosa", "key": "Enter" }
   },
   {
     "id": "green-build-test", "cardId": "green-build",
-    "headline": "The stubborn task gives up",
-    "fortune": "A small task that has annoyed you suddenly becomes easy before lunch. Mithu will pretend he planned it.",
-    "lucky": { "number": "03", "color": "Mint", "hex": "#86efac", "moment": "11:13 AM", "snack": "kachori", "key": "little bell" }
+    "headline": "The flaky test apologizes",
+    "fortune": "That test haunting your week passes three times before lunch. Screenshot it quickly; this is rare wildlife.",
+    "lucky": { "number": "03", "color": "Mint", "hex": "#86efac", "moment": "11:13 AM", "snack": "kachori", "key": "F5" }
   },
   {
     "id": "green-build-demo", "cardId": "green-build",
-    "headline": "The day behaves nicely",
-    "fortune": "Your next busy day runs strangely smoothly: you arrive on time, find what you need, and get the good seat.",
-    "lucky": { "number": "01", "color": "River aqua", "hex": "#70e1d2", "moment": "2:01 PM", "snack": "jalebi", "key": "boat" }
+    "headline": "The demo behaves suspiciously well",
+    "fortune": "Your next screen share loads instantly, the button works, and nobody says “you’re on mute.” Take the historic win.",
+    "lucky": { "number": "01", "color": "River aqua", "hex": "#70e1d2", "moment": "2:01 PM", "snack": "jalebi", "key": "Space" }
   },
   {
     "id": "rubber-duck-lunch", "cardId": "rubber-duck",
-    "headline": "Lunch brings the answer",
-    "fortune": "While telling someone what is bothering you, the answer pops out of your own mouth. Take credit before Mithu does.",
-    "lucky": { "number": "02", "color": "Marigold", "hex": "#ffb000", "moment": "12:22 PM", "snack": "chai biscuit", "key": "smile" }
+    "headline": "Lunch solves the ticket",
+    "fortune": "While explaining the bug before lunch, you hear yourself say the missing answer. Mithu will invoice you for consulting.",
+    "lucky": { "number": "02", "color": "Marigold", "hex": "#ffb000", "moment": "12:22 PM", "snack": "chai biscuit", "key": "F2" }
   },
   {
     "id": "rubber-duck-message", "cardId": "rubber-duck",
-    "headline": "The right words arrive",
-    "fortune": "A kind message reaches you at exactly the right moment and makes one confusing choice feel simple.",
-    "lucky": { "number": "14", "color": "Sunrise gold", "hex": "#ffc857", "moment": "3:14 PM", "snack": "peda", "key": "postcard" }
+    "headline": "The useful message arrives",
+    "fortune": "At 3:14, a teammate replies with the exact clue you need—and only one emoji. Productivity has peaked.",
+    "lucky": { "number": "14", "color": "Sunrise gold", "hex": "#ffc857", "moment": "3:14 PM", "snack": "peda", "key": "/" }
   },
   {
     "id": "rubber-duck-name", "cardId": "rubber-duck",
-    "headline": "A lovely name appears",
-    "fortune": "Tomorrow, you find the perfect name for a plan, pet, dish, or tiny dream. It will sound obvious afterward.",
-    "lucky": { "number": "11", "color": "Sky blue", "hex": "#7dd3fc", "moment": "7:11 AM", "snack": "buttered toast", "key": "blue door" }
+    "headline": "You finally name the thing",
+    "fortune": "The perfect variable name arrives in the shower tomorrow. Keep a towel near the keyboard, not the keyboard near the shower.",
+    "lucky": { "number": "11", "color": "Sky blue", "hex": "#7dd3fc", "moment": "7:11 AM", "snack": "buttered toast", "key": "Tab" }
   },
   {
     "id": "chai-break-walk", "cardId": "chai-break",
-    "headline": "A short walk fixes the mood",
-    "fortune": "Five minutes away from your chair brings back the idea and energy you were chasing. Even the chai looks proud.",
-    "lucky": { "number": "05", "color": "Vermilion", "hex": "#ff6542", "moment": "4:05 PM", "snack": "chai and bun", "key": "river breeze" }
+    "headline": "The fix is outside your chair",
+    "fortune": "Five minutes into tomorrow’s tea break, the clean solution strolls into your head like it pays rent there.",
+    "lucky": { "number": "05", "color": "Vermilion", "hex": "#ff6542", "moment": "4:05 PM", "snack": "chai and bun", "key": "Esc" }
   },
   {
     "id": "chai-break-calendar", "cardId": "chai-break",
-    "headline": "A boring plan disappears",
-    "fortune": "One dull plan gets cancelled early, leaving you a pocket of free time. Guard that tiny holiday.",
-    "lucky": { "number": "12", "color": "Coral", "hex": "#ff7163", "moment": "2:48 PM", "snack": "pakora", "key": "empty chair" }
+    "headline": "A meeting disappears",
+    "fortune": "One afternoon meeting gets cancelled twelve minutes early. Protect that tiny holiday with your whole calendar.",
+    "lucky": { "number": "12", "color": "Coral", "hex": "#ff7163", "moment": "2:48 PM", "snack": "pakora", "key": "Backspace" }
   },
   {
     "id": "chai-break-tab", "cardId": "chai-break",
-    "headline": "A tidy corner pays off",
-    "fortune": "You clear one messy corner and find the thing you thought was lost. The corner requests applause.",
-    "lucky": { "number": "09", "color": "Gulabi pink", "hex": "#ff4fa3", "moment": "5:09 PM", "snack": "lassi", "key": "brass bowl" }
+    "headline": "Closing tabs opens a portal",
+    "fortune": "You close nine forgotten tabs and immediately find the document you needed. The remaining 38 demand legal representation.",
+    "lucky": { "number": "09", "color": "Electric pink", "hex": "#ff4fa3", "moment": "5:09 PM", "snack": "lassi", "key": "Ctrl+W" }
   },
   {
     "id": "tiny-pr-approval", "cardId": "tiny-pr",
-    "headline": "A small effort gets big praise",
-    "fortune": "Something simple you do this week earns a warmer thank-you than expected. Accept the praise without arguing.",
-    "lucky": { "number": "05", "color": "River aqua", "hex": "#70e1d2", "moment": "9:35 AM", "snack": "kachori", "key": "green parrot" }
+    "headline": "Five lines get fan mail",
+    "fortune": "Your smallest pull request gets three approvals before stand-up. The diff is tiny; the victory lap is full size.",
+    "lucky": { "number": "05", "color": "River aqua", "hex": "#70e1d2", "moment": "9:35 AM", "snack": "kachori", "key": "Shift" }
   },
   {
     "id": "tiny-pr-delete", "cardId": "tiny-pr",
-    "headline": "Less becomes much better",
-    "fortune": "By Friday, you remove one unnecessary thing from your day and immediately breathe easier. Very elegant. Tiny bow.",
-    "lucky": { "number": "42", "color": "Indigo", "hex": "#6657d9", "moment": "1:42 PM", "snack": "nimbu pani", "key": "open window" }
+    "headline": "Deleting code wins the day",
+    "fortune": "By Friday you remove more code than you add, and everyone calls it elegant. Please bow responsibly.",
+    "lucky": { "number": "42", "color": "Indigo", "hex": "#6657d9", "moment": "1:42 PM", "snack": "nimbu pani", "key": "Delete" }
   },
   {
     "id": "tiny-pr-detail", "cardId": "tiny-pr",
-    "headline": "One detail makes a day",
-    "fortune": "A thoughtful detail you almost skip makes someone smile. You notice, and your day improves too.",
-    "lucky": { "number": "04", "color": "Gulabi pink", "hex": "#ff4fa3", "moment": "11:04 AM", "snack": "peda", "key": "flower basket" }
+    "headline": "One tiny detail gets noticed",
+    "fortune": "The little interaction you nearly skipped makes someone grin during review. Acceptance criteria are briefly jealous.",
+    "lucky": { "number": "04", "color": "Hot magenta", "hex": "#ff4fa3", "moment": "11:04 AM", "snack": "peda", "key": "*" }
   },
   {
     "id": "great-undo-branch", "cardId": "great-undo",
-    "headline": "The mistake is easy to fix",
-    "fortune": "One scary-looking mistake is completely fixed in ten minutes. Your heartbeat may need slightly longer.",
-    "lucky": { "number": "10", "color": "Soft violet", "hex": "#aa8cff", "moment": "10:10 AM", "snack": "cream biscuit", "key": "second try" }
+    "headline": "The wrong branch forgives you",
+    "fortune": "A scary-looking mistake is completely recovered in under ten minutes. Ctrl+Z accepts another lifetime-achievement award.",
+    "lucky": { "number": "10", "color": "Soft violet", "hex": "#aa8cff", "moment": "10:10 AM", "snack": "cream biscuit", "key": "Ctrl+Z" }
   },
   {
     "id": "great-undo-draft", "cardId": "great-undo",
-    "headline": "You pause at the perfect second",
-    "fortune": "You stop one hasty message before sending it. Future-you sends a thank-you laddoo.",
-    "lucky": { "number": "08", "color": "Saffron", "hex": "#ffb000", "moment": "4:18 PM", "snack": "samosa", "key": "deep breath" }
+    "headline": "The draft saves your dignity",
+    "fortune": "You catch one wildly premature message before sending it. Future-you sends flowers; present-you simply closes the tab.",
+    "lucky": { "number": "08", "color": "Saffron", "hex": "#ffb000", "moment": "4:18 PM", "snack": "samosa", "key": "Esc" }
   },
   {
     "id": "great-undo-rollback", "cardId": "great-undo",
-    "headline": "Plan B steals the show",
-    "fortune": "Next week, your backup plan works so well that the first plan starts calling it boss.",
-    "lucky": { "number": "02", "color": "Ganga aqua", "hex": "#46d9c5", "moment": "2:02 PM", "snack": "fruit chaat", "key": "side street" }
+    "headline": "The rollback lands softly",
+    "fortune": "Next week, plan B works so smoothly that plan A pretends this was the roadmap all along.",
+    "lucky": { "number": "02", "color": "Ganga aqua", "hex": "#46d9c5", "moment": "2:02 PM", "snack": "fruit chaat", "key": "Home" }
   }
 ]

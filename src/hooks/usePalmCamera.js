@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { TIMINGS } from '../constants/experience'
-import { inspectPalm, loadHandDetector } from '../utils/handDetection'
 
 function stopStream(stream) {
   stream?.getTracks().forEach((track) => track.stop())
@@ -9,6 +8,7 @@ function stopStream(stream) {
 export function usePalmCamera(onCapture) {
   const videoRef = useRef(null)
   const streamRef = useRef(null)
+  const sampleRef = useRef(null)
   const previousRef = useRef(null)
   const capturingRef = useRef(false)
   const stableRef = useRef(0)
@@ -53,31 +53,41 @@ export function usePalmCamera(onCapture) {
         streamRef.current = stream
         videoRef.current.srcObject = stream
         await videoRef.current.play()
-        setStatus('loading')
-        const detector = await loadHandDetector()
-        if (cancelled) return
         setStatus('searching')
         const startedAt = performance.now()
-        sampleTimer = setInterval(() => analyzeFrame(detector, startedAt), 150)
+        sampleTimer = setInterval(() => analyzeFrame(startedAt), 120)
       } catch {
         if (!cancelled) {
-          setStatus(streamRef.current ? 'unavailable' : 'blocked')
+          setStatus('blocked')
           setShowFallback(true)
         }
       }
     }
 
-    function analyzeFrame(detector, startedAt) {
+    function analyzeFrame(startedAt) {
       const video = videoRef.current
       if (!video?.videoWidth || performance.now() - startedAt < TIMINGS.cameraWarmup) return
-      const palm = inspectPalm(detector.detectForVideo(video, performance.now()), previousRef.current)
-      previousRef.current = palm.points
-      const steady = palm.found && palm.motion < .024
+      const canvas = sampleRef.current ?? document.createElement('canvas')
+      sampleRef.current = canvas
+      canvas.width = 64
+      canvas.height = 48
+      const context = canvas.getContext('2d', { willReadFrequently: true })
+      context.drawImage(video, 0, 0, 64, 48)
+      const pixels = context.getImageData(8, 6, 48, 36).data
+      const luminance = []
+      for (let index = 0; index < pixels.length; index += 16) {
+        luminance.push((pixels[index] * 3 + pixels[index + 1] * 6 + pixels[index + 2]) / 10)
+      }
+      const mean = luminance.reduce((sum, value) => sum + value, 0) / luminance.length
+      const variance = luminance.reduce((sum, value) => sum + (value - mean) ** 2, 0) / luminance.length
+      const previous = previousRef.current
+      const motion = previous ? luminance.reduce((sum, value, i) => sum + Math.abs(value - previous[i]), 0) / luminance.length : 99
+      previousRef.current = luminance
+      const steady = mean > 24 && mean < 238 && variance > 110 && motion < 14
       stableRef.current = steady ? stableRef.current + 1 : Math.max(0, stableRef.current - 2)
-      const holdScore = Math.round((stableRef.current / TIMINGS.stableSamples) * 100)
-      const nextConfidence = palm.found ? Math.min(99, Math.round(palm.score * .55 + holdScore * .45)) : 0
+      const nextConfidence = Math.min(99, Math.round((stableRef.current / TIMINGS.stableSamples) * 100))
       setConfidence(nextConfidence)
-      setStatus(palm.found ? 'detected' : palm.wrongHand ? 'wrong-hand' : 'searching')
+      if (nextConfidence > 35) setStatus('detected')
       if (stableRef.current >= TIMINGS.stableSamples) capture()
     }
 

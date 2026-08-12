@@ -36,7 +36,7 @@ export default function App() {
       <div className="stage-layer" id="stage-content" tabIndex="-1">
         <StageRouter stage={stage} />
       </div>
-      <StageTransition key={`${revision}:${stage}`} stage={stage} />
+      <StageTransition stage={stage} />
     </main>
   )
 }

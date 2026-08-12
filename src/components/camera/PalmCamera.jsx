@@ -4,11 +4,8 @@ import PalmGuide from './PalmGuide'
 
 const STATUS_COPY = {
   requesting: ['OPENING CAMERA', 'Allow access.'],
-  loading: ['WAKING PALM READER', 'Keep your right hand ready.'],
   searching: ['FINDING RIGHT PALM', 'Open your right hand.'],
-  'wrong-hand': ['OTHER HAND, PLEASE', 'Mithu asked for the right one.'],
   detected: ['RIGHT PALM FOUND', 'Hold it still.'],
-  unavailable: ['PALM READER NAPPING', 'Tap once when ready.'],
   blocked: ['CAMERA BLOCKED', 'Use the demo.'],
   captured: ['GOT IT', 'Right palm secured.'],
 }
@@ -35,7 +32,7 @@ export default function PalmCamera({ onCapture }) {
       <div className="confidence-track" aria-hidden="true"><i style={{ width: `${confidence}%` }} /></div>
       {showFallback && (
         <BrutalButton className="camera-fallback" tone="cream" onClick={() => capture(status === 'blocked')}>
-          {status === 'blocked' ? 'Use demo right palm' : 'Capture right palm now'}
+          {status === 'blocked' ? 'Use demo right palm' : 'Capture right palm'}
         </BrutalButton>
       )}
     </div>

@@ -1,38 +1,38 @@
 {
   "welcome": [
-    { "eyebrow": "Mithu heard something", "title": "Want a tiny peek at tomorrow?", "caption": "Only good gossip." },
-    { "eyebrow": "Kashi sent a whisper", "title": "Shall we ask the future?", "caption": "Mithu is already nosy." },
-    { "eyebrow": "One cheerful prophecy", "title": "Ready for fate with masala?", "caption": "No doom. Promise." },
-    { "eyebrow": "Psst. Come closer", "title": "Want tomorrow's gossip?", "caption": "Fresh from the galis." }
+    { "eyebrow": "Mithu heard something", "title": "Want tomorrow’s gossip?", "caption": "The parrot already peeked." },
+    { "eyebrow": "Fresh from the galis", "title": "Shall we bother destiny?", "caption": "No appointment. Excellent." },
+    { "eyebrow": "One tiny prophecy", "title": "Future, with extra masala?", "caption": "Mithu promises mild chaos." },
+    { "eyebrow": "Psst. Come closer", "title": "Want fate’s group chat?", "caption": "Someone left it unmuted." }
   ],
   "identity": [
-    { "eyebrow": "01 - Your turn", "title": "What should fate call you?", "caption": "Name and birthday." },
-    { "eyebrow": "01 - Quick hello", "title": "Tell Mithu who you are.", "caption": "Two little details." },
-    { "eyebrow": "01 - Mithu's notebook", "title": "Name the main character.", "caption": "That is you." },
-    { "eyebrow": "01 - Before the magic", "title": "Who is peeking ahead?", "caption": "Name. Birthday. Done." }
+    { "eyebrow": "01 · Roll call", "title": "Name this timeline.", "caption": "This session only." },
+    { "eyebrow": "01 · Before the drama", "title": "Who is tempting fate?", "caption": "Name and birthday. Easy." },
+    { "eyebrow": "01 · Mithu’s register", "title": "Add your plot details.", "caption": "Nothing leaves this session." },
+    { "eyebrow": "01 · Hero entry", "title": "Introduce the main character.", "caption": "A name. A birthday. Done." }
   ],
   "palm": [
-    { "eyebrow": "02 - Palm, please", "title": "Show your right palm.", "caption": "The photo stays on your device." },
-    { "eyebrow": "02 - Right-hand hello", "title": "Right palm. Hold still.", "caption": "Gone when the game restarts." },
-    { "eyebrow": "02 - Mithu is squinting", "title": "Right hand up, please.", "caption": "Your photo stays here." },
-    { "eyebrow": "02 - Five-finger forecast", "title": "Give us your right palm.", "caption": "Only for this little reading." }
+    { "eyebrow": "02 · Hand over evidence", "title": "Right palm, please.", "caption": "Local only · erased on reset" },
+    { "eyebrow": "02 · Tiny hand audit", "title": "Right-hand high-five.", "caption": "No uploads · erased on reset" },
+    { "eyebrow": "02 · Mithu is squinting", "title": "Show your right palm.", "caption": "Your frame stays local · reset erases it" },
+    { "eyebrow": "02 · Five-finger forecast", "title": "Right palm. Hold steady.", "caption": "Camera frame stays local · reset erases it" }
   ],
   "scanning": [
-    { "eyebrow": "03 - Palm gossip", "title": "Your lines have stories.", "caption": "LUCK INCOMING" },
-    { "eyebrow": "03 - Mithu is squinting", "title": "Counting your lucky turns.", "caption": "BRAVE HEART" },
-    { "eyebrow": "03 - Chai-powered vision", "title": "Finding the good bits.", "caption": "SUNNY DAYS" },
-    { "eyebrow": "03 - Very serious business", "title": "Your palm looks promising.", "caption": "SMALL WINS" }
+    { "eyebrow": "03 · Scientific-ish", "title": "Your lines are snitching.", "caption": "TAB COLLECTOR" },
+    { "eyebrow": "03 · Palm.exe running", "title": "Mithu found a subplot.", "caption": "CHAOS CAPABLE" },
+    { "eyebrow": "03 · Chai-powered vision", "title": "Scanning the good gossip.", "caption": "BUG RESISTANT" },
+    { "eyebrow": "03 · Extremely advanced", "title": "Counting future wins.", "caption": "KEYBOARD HERO" }
   ],
   "tarot": [
-    { "eyebrow": "04 - Fate deals", "title": "Mithu picks. You breathe.", "caption": "No tapping. Parrot rules." },
-    { "eyebrow": "04 - Cards are ready", "title": "Five cards, one surprise.", "caption": "The river breeze chooses." },
-    { "eyebrow": "04 - A fair shuffle", "title": "Let the deck misbehave.", "caption": "Mithu promises not to peek." },
-    { "eyebrow": "04 - Card drama", "title": "The spread knows something.", "caption": "Hands off. Eyes wide." }
+    { "eyebrow": "04 · Fate deals", "title": "Mithu picks. You breathe.", "caption": "No tapping. Parrot rules." },
+    { "eyebrow": "04 · Deck in session", "title": "Five cards enter…", "caption": "One leaves with gossip." },
+    { "eyebrow": "04 · Random means random", "title": "Let the deck misbehave.", "caption": "Mithu claims neutrality." },
+    { "eyebrow": "04 · Card drama", "title": "The spread knows something.", "caption": "Hands off. Eyes wide." }
   ],
   "result": [
-    { "eyebrow": "05 - Gossip delivered", "title": "Mithu checked twice.", "caption": "YOUR LUCKY FOUR" },
-    { "eyebrow": "05 - Fate has spoken", "title": "This one feels promising.", "caption": "YOUR LITTLE LUCKY LIST" },
-    { "eyebrow": "05 - Fresh prediction", "title": "The parrot stands by it.", "caption": "FOUR LUCKY THINGS" },
-    { "eyebrow": "05 - Good news", "title": "A happy turn is coming.", "caption": "MITHU'S LUCKY PICKS" }
+    { "eyebrow": "05 · Gossip delivered", "title": "Mithu checked twice.", "caption": "MITHU’S LUCKY COMBO" },
+    { "eyebrow": "05 · Fate has receipts", "title": "This one is oddly specific.", "caption": "MITHU’S VERY LUCKY COMBO" },
+    { "eyebrow": "05 · Fresh prediction", "title": "The parrot stands by it.", "caption": "MITHU’S POCKET-SIZED LUCKY COMBO" },
+    { "eyebrow": "05 · Timeline update", "title": "Good news with feathers.", "caption": "MITHU’S SUSPICIOUSLY LUCKY COMBO" }
   ]
 }
