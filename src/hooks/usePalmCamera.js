@@ -14,11 +14,13 @@ export function usePalmCamera(onCapture) {
   const stableRef = useRef(0)
   const [status, setStatus] = useState('requesting')
   const [confidence, setConfidence] = useState(0)
+  const [showFallback, setShowFallback] = useState(false)
 
-  const capture = useCallback(() => {
-    const video = videoRef.current
-    if (capturingRef.current || !video?.videoWidth) return
+  const capture = useCallback((demo = false) => {
+    if (capturingRef.current) return
     capturingRef.current = true
+    const video = videoRef.current
+    if (demo || !video?.videoWidth) return onCapture(null)
 
     const canvas = document.createElement('canvas')
     const size = Math.min(video.videoWidth, video.videoHeight)
@@ -38,7 +40,7 @@ export function usePalmCamera(onCapture) {
   useEffect(() => {
     let cancelled = false
     let sampleTimer
-    let safetyTimer
+    const fallbackTimer = setTimeout(() => setShowFallback(true), 9000)
 
     async function startCamera() {
       try {
@@ -57,12 +59,10 @@ export function usePalmCamera(onCapture) {
         setStatus('searching')
         const startedAt = performance.now()
         sampleTimer = setInterval(() => analyzeFrame(detector, startedAt), 150)
-        safetyTimer = setTimeout(() => {
-          if (!capturingRef.current && videoRef.current?.videoWidth) capture()
-        }, 25_000)
       } catch {
         if (!cancelled) {
           setStatus(streamRef.current ? 'unavailable' : 'blocked')
+          setShowFallback(true)
         }
       }
     }
@@ -85,10 +85,10 @@ export function usePalmCamera(onCapture) {
     return () => {
       cancelled = true
       clearInterval(sampleTimer)
-      clearTimeout(safetyTimer)
+      clearTimeout(fallbackTimer)
       stopStream(streamRef.current)
     }
   }, [capture])
 
-  return { videoRef, status, confidence }
+  return { videoRef, status, confidence, showFallback, capture }
 }

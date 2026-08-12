@@ -1,108 +1,110 @@
 .oracle-guide {
-  --oracle-scene-width: clamp(400px, 30vw, 520px);
-  --oracle-scene-height: min(66vh, 640px);
-  --oracle-art-width: clamp(300px, 23vw, 380px);
-  --bubble-width: clamp(205px, 16vw, 240px);
-  --oracle-edge: clamp(18px, 2vw, 32px);
+  --guide-width: clamp(164px, 15vw, 224px);
+  --bubble-width: clamp(126px, 11vw, 154px);
   position: absolute;
   z-index: 8;
-  bottom: 54px;
-  width: var(--oracle-scene-width);
-  height: var(--oracle-scene-height);
+  right: clamp(-24px, -1.5vw, -9px);
+  bottom: -24px;
+  width: var(--guide-width);
   pointer-events: none;
 }
 
-.oracle-guide--side-right { right: var(--oracle-edge); }
-.oracle-guide--side-left { left: var(--oracle-edge); }
+.oracle-guide--side-left { right: auto; left: clamp(-24px, -1.5vw, -9px); }
+.oracle-guide--pose-identity-original,
+.oracle-guide--pose-scanning-original,
+.oracle-guide--pose-tarot-original,
+.oracle-guide--pose-result-original,
+.oracle-guide--pose-mischief-slip,
+.oracle-guide--pose-mischief-detective,
+.oracle-guide--pose-laugh-crown { --guide-width: clamp(176px, 16vw, 238px); }
+.oracle-guide--pose-sideeye-pin { --guide-width: clamp(148px, 13vw, 202px); }
 
 .oracle-guide__art {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  bottom: 0;
-  width: var(--oracle-art-width);
-  height: 100%;
+  width: 100%;
+  height: min(43vh, 354px);
   display: block;
   object-fit: contain;
   object-position: center bottom;
-  filter: drop-shadow(9px 11px 0 rgba(25, 19, 15, .76));
+  filter: drop-shadow(7px 9px 0 rgba(25, 19, 15, .78));
   user-select: none;
 }
-
-.oracle-guide--side-right .oracle-guide__art { right: 0; }
-.oracle-guide--side-left .oracle-guide__art { left: 0; }
 
 .oracle-guide__bubble {
   position: absolute;
   z-index: 3;
-  top: clamp(8px, calc(var(--oracle-head-y, 110px) - clamp(40px, 3vw, 58px)), calc(100% - 94px));
+  top: calc(var(--oracle-content-top, 0px) - 60px);
+  right: clamp(28px, 2.6vw, 40px);
   width: var(--bubble-width);
-  min-height: 56px;
-  padding: 12px 15px;
+  min-height: 44px;
+  padding: 9px 11px;
   color: var(--ink);
   background: var(--cream);
   border: 3px solid var(--ink);
   border-radius: 0;
-  box-shadow: 8px 8px 0 var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
   font-family: var(--display);
-  font-size: 19px;
-  line-height: 1.12;
+  font-size: clamp(13px, 1.12vw, 17px);
+  line-height: 1.05;
   text-align: left;
   pointer-events: auto;
   cursor: pointer;
-  animation: bubble-pop .3s var(--ease-pop) both;
-  transition: rotate .2s var(--ease-pop), translate .2s var(--ease-pop);
+  animation: bubble-pop .28s var(--ease-pop) both;
+  transition: transform .2s var(--ease-pop);
 }
 
-.oracle-guide--side-right .oracle-guide__bubble {
-  left: clamp(0px, calc(var(--oracle-head-x, 260px) - var(--bubble-width) - 18px), calc(100% - var(--bubble-width)));
-}
-.oracle-guide--side-left .oracle-guide__bubble {
-  left: clamp(0px, calc(var(--oracle-head-x, 160px) + 18px), calc(100% - var(--bubble-width)));
-}
-
+.oracle-guide--side-left .oracle-guide__bubble { right: auto; left: clamp(28px, 2.6vw, 40px); }
 .oracle-guide__bubble::before,
-.oracle-guide__bubble::after { position: absolute; top: 50%; content: ''; pointer-events: none; }
+.oracle-guide__bubble::after { position: absolute; content: ''; pointer-events: none; }
 .oracle-guide__bubble::before {
-  width: 24px;
-  height: 28px;
-  margin-top: -14px;
+  right: 23px;
+  bottom: -22px;
+  width: 27px;
+  height: 24px;
   background: var(--ink);
+  clip-path: polygon(0 0, 100% 0, 72% 100%);
 }
 .oracle-guide__bubble::after {
-  width: 16px;
-  height: 19px;
-  margin-top: -9px;
+  right: 28px;
+  bottom: -14px;
+  width: 19px;
+  height: 18px;
   background: var(--cream);
+  clip-path: polygon(0 0, 100% 0, 72% 100%);
 }
-.oracle-guide--side-right .oracle-guide__bubble::before { right: -24px; clip-path: polygon(0 0, 100% 50%, 0 100%); }
-.oracle-guide--side-right .oracle-guide__bubble::after { right: -15px; clip-path: polygon(0 0, 100% 50%, 0 100%); }
-.oracle-guide--side-left .oracle-guide__bubble::before { left: -24px; clip-path: polygon(100% 0, 0 50%, 100% 100%); }
-.oracle-guide--side-left .oracle-guide__bubble::after { left: -15px; clip-path: polygon(100% 0, 0 50%, 100% 100%); }
-.oracle-guide__bubble:hover { translate: 0 -3px; rotate: -.5deg; }
-.oracle-guide__bubble:focus-visible { outline: 4px solid var(--sun); outline-offset: 4px; }
+.oracle-guide--side-left .oracle-guide__bubble::before { right: auto; left: 23px; transform: scaleX(-1); }
+.oracle-guide--side-left .oracle-guide__bubble::after { right: auto; left: 28px; transform: scaleX(-1); }
+.oracle-guide__bubble:hover { transform: translateY(-2px) rotate(-.4deg); }
+.oracle-guide__bubble:focus-visible { outline: 4px solid var(--sun); outline-offset: 3px; }
 
 @keyframes bubble-pop {
-  from { opacity: 0; scale: .88; translate: 0 8px; }
+  from { opacity: 0; scale: .86; translate: 0 7px; }
   to { opacity: 1; scale: 1; translate: 0; }
 }
 
-@media (max-width: 1199px) {
-  .oracle-guide__bubble { min-height: 48px; padding: 9px 11px; font-size: 16px; box-shadow: 6px 6px 0 var(--ink); }
+@media (max-width: 920px) {
+  .oracle-guide { --guide-width: 142px; right: -23px; bottom: 28px; }
+  .oracle-guide--side-left { right: auto; left: -23px; }
+  .oracle-guide__art { height: 224px; }
+  .oracle-guide__bubble { top: calc(var(--oracle-content-top, 0px) + 4px); right: calc(100% - 7px); bottom: auto; width: min(146px, 39vw); min-height: 39px; padding: 7px 9px; font-size: 12px; }
+  .oracle-guide--side-left .oracle-guide__bubble { right: auto; left: calc(100% - 7px); }
+  .oracle-guide__bubble::before { right: -19px; bottom: 8px; width: 21px; height: 23px; clip-path: polygon(0 0, 100% 52%, 0 100%); }
+  .oracle-guide__bubble::after { right: -12px; bottom: 11px; width: 15px; height: 17px; clip-path: polygon(0 0, 100% 52%, 0 100%); }
+  .oracle-guide--side-left .oracle-guide__bubble::before { right: auto; left: -19px; }
+  .oracle-guide--side-left .oracle-guide__bubble::after { right: auto; left: -12px; }
 }
 
 @media (max-width: 700px) {
-  .oracle-guide__bubble { min-height: 42px; padding: 8px 9px; border-width: 2px; box-shadow: 5px 5px 0 var(--ink); font-size: 14px; }
-  .oracle-guide__bubble::before { width: 19px; height: 22px; margin-top: -11px; }
-  .oracle-guide__bubble::after { width: 12px; height: 15px; margin-top: -7px; }
-  .oracle-guide--side-right .oracle-guide__bubble::before { right: -19px; }
-  .oracle-guide--side-right .oracle-guide__bubble::after { right: -11px; }
-  .oracle-guide--side-left .oracle-guide__bubble::before { left: -19px; }
-  .oracle-guide--side-left .oracle-guide__bubble::after { left: -11px; }
+  .oracle-guide { --guide-width: 88px; right: -12px; bottom: 29px; }
+  .oracle-guide--side-left { right: auto; left: -12px; }
+  .oracle-guide__art { height: 116px; filter: drop-shadow(4px 5px 0 rgba(25, 19, 15, .72)); }
+  .oracle-guide__bubble { width: min(142px, 43vw); min-height: 36px; border-width: 2px; box-shadow: 4px 4px 0 var(--ink); font-size: 11px; }
 }
 
-@media (min-width: 1600px) and (min-height: 920px) { .oracle-guide__bubble { font-size: 22px; } }
-@media (min-width: 1920px) and (min-height: 980px) { .oracle-guide__bubble { font-size: 23px; } }
-@media (min-width: 2560px) and (min-height: 1200px) { .oracle-guide__bubble { padding: 15px 18px; font-size: 25px; } }
-@media (min-width: 3200px) and (min-height: 1800px) { .oracle-guide__bubble { padding: 18px 21px; font-size: 31px; } }
-@media (max-width: 700px) and (max-height: 620px) { .oracle-guide__bubble { font-size: 13px; } }
+@media (max-width: 920px) and (max-height: 620px) {
+  .oracle-guide { bottom: 16px; }
+  .oracle-guide__bubble { top: auto; bottom: 12px; }
+}
+
 @media (prefers-reduced-motion: reduce) { .oracle-guide__bubble { animation: none; transition: none; } }

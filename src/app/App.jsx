@@ -5,6 +5,7 @@ import ProgressRail from '../components/chrome/ProgressRail'
 import StagePostcard from '../components/chrome/StagePostcard'
 import OracleGuide from '../components/oracle/OracleGuide'
 import SceneBoundary from '../components/three/SceneBoundary'
+import StageTransition from '../components/transitions/StageTransition'
 import { useFortuneStore } from '../store/useFortuneStore'
 import { createStageVariants } from '../utils/variantMachine'
 import StageRouter from './StageRouter'
@@ -35,6 +36,7 @@ export default function App() {
       <div className="stage-layer" id="stage-content" tabIndex="-1">
         <StageRouter stage={stage} />
       </div>
+      <StageTransition key={`${revision}:${stage}`} stage={stage} />
     </main>
   )
 }

@@ -7,7 +7,6 @@ import SceneLighting from './SceneLighting'
 import SceneRig from './SceneRig'
 import StageScenery from './StageScenery'
 import { useFortuneStore } from '../../store/useFortuneStore'
-import TravelForeground from '../transitions/TravelForeground'
 import VerticalWorld from './VerticalWorld'
 
 export default function WorldCanvas({ stage }) {
@@ -31,11 +30,8 @@ export default function WorldCanvas({ stage }) {
             <VerticalWorld stage={stage} />
             <Atmosphere stage={stage} />
             <StageScenery stage={stage} />
-            <TravelForeground key={`${resetRevision}:${stage}`}
-              stage={stage} resetRevision={resetRevision} />
           </SceneRig>
-          <PostEffects enabled={effects} stage={stage} tarotPhase={tarotPhase}
-            resetRevision={resetRevision} />
+          <PostEffects enabled={effects} stage={stage} tarotPhase={tarotPhase} />
         </PerformanceMonitor>
       </Canvas>
     </div>

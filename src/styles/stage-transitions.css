@@ -1,0 +1,39 @@
+.stage-transition {
+  position: fixed;
+  z-index: 30;
+  inset: 0;
+  overflow: hidden;
+  opacity: 1;
+  background: var(--transition-bg);
+  pointer-events: none !important;
+  contain: strict;
+  isolation: isolate;
+  animation: kashi-transition-release var(--transition-ms) cubic-bezier(.35, 0, .18, 1) both;
+}
+
+.stage-transition__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(255, 230, 155, .2), transparent 46%),
+    linear-gradient(145deg, rgba(25, 19, 15, .12), transparent 45% 60%, rgba(25, 19, 15, .16)),
+    var(--transition-bg);
+}
+
+.stage-transition__canvas { position: absolute !important; inset: 0; width: 100% !important; height: 100% !important; }
+.stage-transition[data-mode='rewind'] { animation-timing-function: cubic-bezier(.22, .72, .18, 1); }
+.stage-transition--reduced { animation-name: kashi-transition-reduced; }
+
+@keyframes kashi-transition-release {
+  0%, 54% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes kashi-transition-reduced {
+  from { opacity: .92; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage-transition { animation-duration: 180ms; }
+}
