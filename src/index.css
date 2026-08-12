@@ -21,3 +21,5 @@
 @import './styles/responsive.css';
 @import './styles/large-screen.css';
 @import './styles/extreme-screens.css';
+@import './styles/readable-type.css';
+@import './styles/readable-tarot.css';

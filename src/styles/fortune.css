@@ -39,13 +39,12 @@
 .result-card em { font-size: 8px; font-style: normal; font-weight: 820; letter-spacing: .09em; }
 
 .fortune-paper { position: relative; max-width: 720px; padding: clamp(26px, 3.4vw, 44px); background: var(--cream); border: 4px solid var(--ink); box-shadow: var(--shadow-lg); }
-.fortune-kicker { width: max-content; margin: 0 0 13px; padding: 5px 8px; color: var(--cream); background: var(--ink); font-size: 9px; font-weight: 820; letter-spacing: .09em; text-transform: uppercase; }
-.fortune-aside { margin: 0 0 9px; color: var(--muted); font-size: 11px; font-weight: 760; }
+.fortune-kicker { width: fit-content; max-width: 100%; margin: 0 0 13px; padding: 5px 8px; overflow-wrap: anywhere; color: var(--cream); background: var(--ink); font-size: 9px; font-weight: 820; letter-spacing: .09em; text-transform: uppercase; }
 .fortune-stage h1 { font-size: clamp(34px, 4.1vw, 57px); line-height: .98; letter-spacing: -.035em; }
 .fortune-prediction { margin: 16px 0; font-size: clamp(14px, 1.45vw, 18px); font-weight: 690; line-height: 1.42; }
-.fortune-combo { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 12px; margin: 0 0 21px; padding: 11px 14px; background: var(--fortune-accent); border: var(--border-thin); box-shadow: var(--shadow-sm); }
-.fortune-combo span { font-size: 8px; font-weight: 850; letter-spacing: .09em; }
-.fortune-combo b { font-size: 11px; font-weight: 760; text-transform: capitalize; }
+.fortune-combo { display: flex; flex-wrap: wrap; align-items: baseline; gap: 7px 14px; margin: 0 0 21px; padding: 13px 16px; background: var(--fortune-accent); border: var(--border-thin); box-shadow: var(--shadow-sm); }
+.fortune-combo span { font-size: clamp(11px, .9vw, 14px); font-weight: 880; letter-spacing: .07em; text-transform: uppercase; }
+.fortune-combo b { font-size: clamp(15px, 1.25vw, 19px); font-weight: 800; line-height: 1.2; text-transform: capitalize; }
 
 .result-actions { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .result-actions .brutal-button { min-height: 48px; font-size: 10px; }
@@ -54,10 +53,83 @@
 .result-actions p b { color: var(--ink); font-variant-numeric: tabular-nums; }
 
 @media (max-width: 700px) {
+  .fortune-combo { gap: 5px 10px; padding: 10px 12px; }
+  .fortune-combo span { font-size: 10px; }
+  .fortune-combo b { font-size: 14px; }
   .fortune-stage .result-card { left: 43%; bottom: -3px; width: clamp(45px, 14vw, 57px); padding: 5px; border-width: 2px; box-shadow: 4px 4px 0 var(--ink); display: flex; }
   .fortune-stage .result-card::before { inset: 4px; border-width: 1px; }
   .fortune-stage .result-card small { font-size: 5px; }
   .fortune-stage .result-card b { width: 28px; height: 28px; border-width: 1px; font-size: 17px; }
   .fortune-stage .result-card strong { font-size: 7px; }
+  .fortune-stage .result-card em { display: none; }
+}
+
+/* The final reveal is a hero card, independently sized from the dealt spread. */
+.fortune-stage .result-card { left: 14%; bottom: -10px; width: min(176px, 16vw); padding: 16px; }
+.fortune-stage .result-card::before { inset: 12px; }
+.fortune-stage .result-card small { font-size: 13px; }
+.fortune-stage .result-card b { width: 76px; height: 76px; font-size: 45px; }
+.fortune-stage .result-card strong { font-size: 23px; line-height: .95; }
+.fortune-stage .result-card em { font-size: 10px; text-align: center; }
+
+@media (min-width: 1440px) and (min-height: 880px) and (max-width: 1599px) {
+  .fortune-stage .result-card { width: 190px; }
+  .fortune-stage .result-card b { width: 80px; height: 80px; font-size: 46px; }
+  .fortune-stage .result-card strong { font-size: 25px; }
+  .fortune-stage .result-card em { font-size: 11px; }
+}
+
+@media (min-width: 1600px) and (min-height: 920px) {
+  .fortune-stage .result-card { left: 12%; width: 196px; padding: 18px; }
+  .fortune-stage .result-card small { font-size: 15px; }
+  .fortune-stage .result-card b { width: 88px; height: 88px; font-size: 52px; }
+  .fortune-stage .result-card strong { font-size: 27px; }
+  .fortune-stage .result-card em { font-size: 12px; }
+}
+
+@media (min-width: 1920px) and (min-height: 980px) {
+  .fortune-stage .result-card { width: 230px; }
+  .fortune-stage .result-card b { width: 96px; height: 96px; font-size: 56px; }
+  .fortune-stage .result-card strong { font-size: 29px; }
+}
+
+@media (min-width: 2560px) and (min-height: 1200px) {
+  .fortune-stage .result-card { width: 260px; padding: 21px; }
+  .fortune-stage .result-card::before { inset: 15px; }
+  .fortune-stage .result-card small { font-size: 17px; }
+  .fortune-stage .result-card b { width: 104px; height: 104px; font-size: 62px; }
+  .fortune-stage .result-card strong { font-size: 31px; }
+  .fortune-stage .result-card em { font-size: 14px; }
+}
+
+@media (min-width: 3200px) and (min-height: 1800px) {
+  .fortune-stage .result-card { width: 310px; padding: 25px; }
+  .fortune-stage .result-card small { font-size: 20px; }
+  .fortune-stage .result-card b { width: 124px; height: 124px; font-size: 74px; }
+  .fortune-stage .result-card strong { font-size: 38px; }
+  .fortune-stage .result-card em { font-size: 17px; }
+}
+
+@media (max-width: 700px) {
+  .fortune-stage .result-card { left: 39%; bottom: -5px; width: clamp(56px, 17vw, 66px); padding: 6px; border-width: 3px; box-shadow: 6px 6px 0 var(--ink); }
+  .fortune-stage .result-card::before { inset: 5px; }
+  .fortune-stage .result-card small, .fortune-stage .result-card em { display: none; }
+  .fortune-stage .result-card b { width: 36px; height: 36px; font-size: 22px; }
+  .fortune-stage .result-card strong { font-size: 12px; }
+}
+
+@media (min-width: 921px) and (max-height: 820px) {
+  .fortune-stage .result-card { width: 150px; padding: 12px; }
+  .fortune-stage .result-card small { font-size: 11px; }
+  .fortune-stage .result-card b { width: 60px; height: 60px; font-size: 36px; }
+  .fortune-stage .result-card strong { font-size: 19px; }
+  .fortune-stage .result-card em { font-size: 9px; }
+}
+
+@media (min-width: 921px) and (max-height: 680px) {
+  .fortune-stage .result-card { left: 16%; width: 136px; padding: 10px; }
+  .fortune-stage .result-card small { font-size: 9px; }
+  .fortune-stage .result-card b { width: 50px; height: 50px; font-size: 30px; }
+  .fortune-stage .result-card strong { font-size: 16px; }
   .fortune-stage .result-card em { display: none; }
 }

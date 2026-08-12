@@ -14,7 +14,6 @@ export function usePalmCamera(onCapture) {
   const stableRef = useRef(0)
   const [status, setStatus] = useState('requesting')
   const [confidence, setConfidence] = useState(0)
-  const [showFallback, setShowFallback] = useState(false)
 
   const capture = useCallback((demo = false) => {
     if (capturingRef.current) return
@@ -40,7 +39,6 @@ export function usePalmCamera(onCapture) {
   useEffect(() => {
     let cancelled = false
     let sampleTimer
-    const fallbackTimer = setTimeout(() => setShowFallback(true), 9000)
 
     async function startCamera() {
       try {
@@ -59,7 +57,6 @@ export function usePalmCamera(onCapture) {
       } catch {
         if (!cancelled) {
           setStatus('blocked')
-          setShowFallback(true)
         }
       }
     }
@@ -84,21 +81,25 @@ export function usePalmCamera(onCapture) {
       const motion = previous ? luminance.reduce((sum, value, i) => sum + Math.abs(value - previous[i]), 0) / luminance.length : 99
       previousRef.current = luminance
       const steady = mean > 24 && mean < 238 && variance > 110 && motion < 14
-      stableRef.current = steady ? stableRef.current + 1 : Math.max(0, stableRef.current - 2)
-      const nextConfidence = Math.min(99, Math.round((stableRef.current / TIMINGS.stableSamples) * 100))
+      stableRef.current = steady
+        ? Math.min(TIMINGS.stableSamples, stableRef.current + 1)
+        : Math.max(0, stableRef.current - 2)
+      const steadyConfidence = Math.min(100, Math.round((stableRef.current / TIMINGS.stableSamples) * 100))
+      const elapsed = performance.now() - startedAt
+      const timedConfidence = Math.min(100, Math.floor((elapsed / TIMINGS.palmCaptureDelay) * 100))
+      const nextConfidence = Math.min(steadyConfidence, timedConfidence)
       setConfidence(nextConfidence)
-      if (nextConfidence > 35) setStatus('detected')
-      if (stableRef.current >= TIMINGS.stableSamples) capture()
+      if (steadyConfidence > 35) setStatus('detected')
+      if (steady && stableRef.current >= TIMINGS.stableSamples && timedConfidence >= 100) capture()
     }
 
     startCamera()
     return () => {
       cancelled = true
       clearInterval(sampleTimer)
-      clearTimeout(fallbackTimer)
       stopStream(streamRef.current)
     }
   }, [capture])
 
-  return { videoRef, status, confidence, showFallback, capture }
+  return { videoRef, status, confidence, capture }
 }

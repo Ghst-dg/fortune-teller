@@ -1,0 +1,80 @@
+[
+  {
+    "id": "great-undo-branch", "cardId": "great-undo",
+    "headline": "The oops becomes the story",
+    "fortune": "A small mistake will become the funniest part of your day, and nobody will be upset—not even the samosa.",
+    "lucky": { "number": "10", "color": "Soft violet", "hex": "#aa8cff", "moment": "10:10 AM", "snack": "cream biscuit" }
+  },
+  {
+    "id": "great-undo-draft", "cardId": "great-undo",
+    "headline": "You pause at the perfect second",
+    "fortune": "You will stop one hasty reply, take a breath, and send the kinder version. Future-you owes you a laddoo.",
+    "lucky": { "number": "08", "color": "Saffron", "hex": "#ffb000", "moment": "4:18 PM", "snack": "samosa" }
+  },
+  {
+    "id": "great-undo-rollback", "cardId": "great-undo",
+    "headline": "Plan B brings snacks",
+    "fortune": "Your backup plan will work better than the original and somehow include better food. Plan A may file a complaint.",
+    "lucky": { "number": "02", "color": "Ganga aqua", "hex": "#46d9c5", "moment": "2:02 PM", "snack": "fruit chaat" }
+  },
+  {
+    "id": "great-undo-wrong-lane", "cardId": "great-undo",
+    "headline": "The wrong turn has jalebi",
+    "fortune": "A wrong turn leads you past a tiny shop frying fresh jalebi. The lane refuses to apologize, and neither should you.",
+    "lucky": { "number": "17", "color": "Jalebi orange", "hex": "#ee8a28", "moment": "5:17 PM", "snack": "jalebi" }
+  },
+  {
+    "id": "great-undo-salty-dal", "cardId": "great-undo",
+    "headline": "The dal forgives you",
+    "fortune": "A meal you nearly oversalt is rescued before anyone notices. Accept the praise with the calm of a seasoned magician.",
+    "lucky": { "number": "07", "color": "Turmeric gold", "hex": "#d9a11e", "moment": "1:07 PM", "snack": "papad" }
+  },
+  {
+    "id": "great-undo-missed-ride", "cardId": "great-undo",
+    "headline": "The missed ride brings company",
+    "fortune": "You miss one ride and meet someone you have not seen in years. Being late arrives with excellent conversation.",
+    "lucky": { "number": "22", "color": "Ganga blue", "hex": "#4e9fb3", "moment": "6:22 PM", "snack": "kulhad chai" }
+  },
+  {
+    "id": "great-undo-bright-patch", "cardId": "great-undo",
+    "headline": "The tear becomes the best part",
+    "fortune": "A small tear gets a bright patch and turns an old favorite into a better favorite. Even clothes enjoy second chances.",
+    "lucky": { "number": "14", "color": "Fuchsia", "hex": "#cf4f82", "moment": "2:14 PM", "snack": "guava chaat" }
+  },
+  {
+    "id": "great-undo-wrong-order", "cardId": "great-undo",
+    "headline": "The mix-up tastes wonderful",
+    "fortune": "Your order arrives slightly wrong and unexpectedly delicious. A new favorite enters through the side door.",
+    "lucky": { "number": "26", "color": "Pistachio", "hex": "#a8c66c", "moment": "7:26 PM", "snack": "rabri" }
+  },
+  {
+    "id": "great-undo-honest-apology", "cardId": "great-undo",
+    "headline": "Three honest words soften everything",
+    "fortune": "You say “I was wrong” before pride can interfere. The room gets warmer, and so does the friendship.",
+    "lucky": { "number": "09", "color": "Lotus pink", "hex": "#df799f", "moment": "11:09 AM", "snack": "laddoo" }
+  },
+  {
+    "id": "great-undo-burnt-roti", "cardId": "great-undo",
+    "headline": "The burnt roti wins a fan",
+    "fortune": "One roti comes out shaped like a distant continent. Everyone laughs, and the hungriest person asks for it.",
+    "lucky": { "number": "31", "color": "Ember orange", "hex": "#d96c3f", "moment": "8:31 PM", "snack": "roasted peanuts" }
+  },
+  {
+    "id": "great-undo-indoor-picnic", "cardId": "great-undo",
+    "headline": "The picnic moves indoors",
+    "fortune": "Rain sends everyone home, so the picnic happens on the floor instead. Somehow the laughter fits better there.",
+    "lucky": { "number": "20", "color": "Rain blue", "hex": "#5b7fa3", "moment": "4:20 PM", "snack": "pakora" }
+  },
+  {
+    "id": "great-undo-haircut-peace", "cardId": "great-undo",
+    "headline": "The haircut stops arguing",
+    "fortune": "A haircut you doubted settles beautifully after one wash. The mirror withdraws its earlier complaint.",
+    "lucky": { "number": "04", "color": "Soft violet", "hex": "#aa8cff", "moment": "10:04 AM", "snack": "imarti" }
+  },
+  {
+    "id": "great-undo-forgotten-name", "cardId": "great-undo",
+    "headline": "The awkward moment becomes a joke",
+    "fortune": "You forget a name, admit it, and both of you laugh. By the end of the conversation, you will not forget it again.",
+    "lucky": { "number": "29", "color": "Marigold", "hex": "#ffb000", "moment": "3:29 PM", "snack": "kachori" }
+  }
+]

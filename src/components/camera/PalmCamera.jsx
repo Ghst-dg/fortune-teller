@@ -11,7 +11,7 @@ const STATUS_COPY = {
 }
 
 export default function PalmCamera({ onCapture }) {
-  const { videoRef, status, confidence, showFallback, capture } = usePalmCamera(onCapture)
+  const { videoRef, status, confidence, capture } = usePalmCamera(onCapture)
   const [label, detail] = STATUS_COPY[status]
 
   return (
@@ -30,11 +30,8 @@ export default function PalmCamera({ onCapture }) {
         <strong>{String(confidence).padStart(2, '0')}<small>%</small></strong>
       </div>
       <div className="confidence-track" aria-hidden="true"><i style={{ width: `${confidence}%` }} /></div>
-      {showFallback && (
-        <BrutalButton className="camera-fallback" tone="cream" onClick={() => capture(status === 'blocked')}>
-          {status === 'blocked' ? 'Use demo right palm' : 'Capture right palm'}
-        </BrutalButton>
-      )}
+      {status === 'blocked' && <BrutalButton className="camera-fallback" tone="cream"
+        onClick={() => capture(true)}>Use demo right palm</BrutalButton>}
     </div>
   )
 }

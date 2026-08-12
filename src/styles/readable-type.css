@@ -1,0 +1,61 @@
+/* Enlarge only instructions and values people must read during the experience. */
+.identity-form > label > span,
+.date-selector legend { font-size: 13px; }
+.date-part span { font-size: 10px; }
+.form-error { font-size: 12px; }
+
+.camera-loader span,
+.camera-readout p b { font-size: 13px; }
+.camera-readout p small { font-size: 11px; }
+.camera-readout > strong small,
+.camera-code { font-size: 11px; }
+.privacy-note { font-size: 12px; }
+
+.scan-data { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+.scan-data p { padding: 12px; }
+.scan-data span { font-size: 12px; letter-spacing: .11em; }
+.scan-data b { overflow-wrap: anywhere; font-size: 15px; line-height: 1.16; }
+.map-line b, .map-node { font-size: 8px; }
+.map-node { width: 20px; height: 20px; }
+.scan-caption p { font-size: 14px; line-height: 1.25; }
+
+@media (min-width: 1920px) and (min-height: 980px) {
+  .identity-form > label > span, .date-selector legend { font-size: 15px; }
+  .date-part span, .form-error { font-size: 13px; }
+  .camera-loader span, .camera-readout p b, .privacy-note { font-size: 15px; }
+  .camera-readout p small, .camera-readout > strong small { font-size: 13px; }
+  .scan-data span { font-size: 14px; }
+  .scan-data b { font-size: 18px; }
+  .scan-caption p { font-size: 16px; }
+}
+
+@media (min-width: 3200px) and (min-height: 1800px) {
+  .identity-form > label > span, .date-selector legend { font-size: 19px; }
+  .date-part span, .form-error { font-size: 16px; }
+  .camera-loader span, .camera-readout p b, .privacy-note { font-size: 19px; }
+  .camera-readout p small, .camera-readout > strong small { font-size: 16px; }
+  .scan-data span { font-size: 17px; }
+  .scan-data b { font-size: 23px; }
+  .scan-caption p { font-size: 20px; }
+}
+
+@media (max-width: 700px) {
+  .identity-form > label > span, .date-selector legend { font-size: 12px; }
+  .date-part span, .form-error { font-size: 10px; }
+  .camera-loader span, .camera-readout p b { font-size: 11px; }
+  .camera-readout p small, .privacy-note { font-size: 10px; }
+  .scan-data p { padding: 7px; }
+  .scan-data span { font-size: 10px; }
+  .scan-data b { font-size: 13px; }
+  .map-line b { display: none; }
+  .map-node { width: 18px; height: 18px; font-size: 7px; }
+  .scan-caption p { font-size: 11px; }
+  .oracle-guide__bubble { font-size: 13px; }
+}
+
+@media (min-width: 921px) and (max-height: 680px) {
+  .scan-data span { font-size: 9px; }
+  .scan-data b { font-size: 12px; }
+  .scan-caption p { font-size: 11px; }
+  .map-line b { display: none; }
+}

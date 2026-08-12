@@ -7,7 +7,11 @@
 }
 
 .intro-stage .stage-copy { --paper-tilt: -.55deg; }
-.profile-stage .stage-copy { --paper-tilt: .45deg; }
+.profile-stage .stage-copy {
+  --paper-tilt: 0deg;
+  --run-paper-tilt: 0deg;
+  rotate: none;
+}
 .camera-module { --paper-tilt: .65deg; }
 .scan-console { --paper-tilt: -.5deg; }
 .fortune-paper { --paper-tilt: -.35deg; }

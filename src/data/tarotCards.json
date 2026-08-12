@@ -2,15 +2,15 @@
   {
     "id": "green-build",
     "number": "I",
-    "name": "The Green Build",
+    "name": "The Lucky Start",
     "symbol": "✓",
-    "micro": "FIRST TRY ENERGY",
+    "micro": "GOOD THINGS BEGIN",
     "color": "lime"
   },
   {
     "id": "rubber-duck",
     "number": "II",
-    "name": "The Rubber Duck",
+    "name": "The Chatty Parrot",
     "symbol": "?",
     "micro": "SAY IT OUT LOUD",
     "color": "gold"
@@ -20,23 +20,23 @@
     "number": "III",
     "name": "The Chai Break",
     "symbol": "≈",
-    "micro": "REST IS RESEARCH",
+    "micro": "REST BRINGS ANSWERS",
     "color": "coral"
   },
   {
     "id": "tiny-pr",
     "number": "IV",
-    "name": "The Tiny PR",
+    "name": "The Tiny Victory",
     "symbol": "+",
-    "micro": "SMALL BUT MIGHTY",
+    "micro": "SMALL WINS COUNT",
     "color": "aqua"
   },
   {
     "id": "great-undo",
     "number": "V",
-    "name": "The Great Undo",
+    "name": "The Second Chance",
     "symbol": "↶",
-    "micro": "MISTAKES HAVE EXITS",
+    "micro": "TRY AGAIN GENTLY",
     "color": "violet"
   }
 ]

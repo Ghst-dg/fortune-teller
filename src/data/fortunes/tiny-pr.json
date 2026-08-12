@@ -1,0 +1,80 @@
+[
+  {
+    "id": "tiny-pr-approval", "cardId": "tiny-pr",
+    "headline": "Your kindness makes a round trip",
+    "fortune": "You will help someone with a tiny thing, then find your own tiny problem already solved. The universe enjoys symmetry.",
+    "lucky": { "number": "05", "color": "River aqua", "hex": "#70e1d2", "moment": "9:35 AM", "snack": "kachori" }
+  },
+  {
+    "id": "tiny-pr-delete", "cardId": "tiny-pr",
+    "headline": "The missing thing waves",
+    "fortune": "Something you thought was lost will be sitting in an obvious place, looking innocent. Please question it firmly.",
+    "lucky": { "number": "42", "color": "Indigo", "hex": "#6657d9", "moment": "1:42 PM", "snack": "nimbu pani" }
+  },
+  {
+    "id": "tiny-pr-detail", "cardId": "tiny-pr",
+    "headline": "One detail makes their day",
+    "fortune": "You will remember a small detail about someone, and their whole face will light up. Mithu takes no credit for once.",
+    "lucky": { "number": "04", "color": "Hot magenta", "hex": "#ff4fa3", "moment": "11:04 AM", "snack": "peda" }
+  },
+  {
+    "id": "tiny-pr-plant-applause", "cardId": "tiny-pr",
+    "headline": "Your plant grows applause",
+    "fortune": "The plant you nearly gave up on uncurls one bright leaf. It has forgiven you and would like better watering.",
+    "lucky": { "number": "08", "color": "Leaf green", "hex": "#65a765", "moment": "8:08 AM", "snack": "roasted makhana" }
+  },
+  {
+    "id": "tiny-pr-biscuit-dunk", "cardId": "tiny-pr",
+    "headline": "The biscuit survives",
+    "fortune": "Your next biscuit survives a dangerously long chai dunk. Some victories deserve a respectful silence.",
+    "lucky": { "number": "02", "color": "Caramel", "hex": "#c98545", "moment": "4:02 PM", "snack": "chai biscuit" }
+  },
+  {
+    "id": "tiny-pr-mango-oracle", "cardId": "tiny-pr",
+    "headline": "You choose the perfect mango",
+    "fortune": "With no evidence whatsoever, you pick the sweetest mango. The family promotes you to fruit oracle.",
+    "lucky": { "number": "21", "color": "Mango gold", "hex": "#f6b73c", "moment": "12:21 PM", "snack": "aam papad" }
+  },
+  {
+    "id": "tiny-pr-button-loyalty", "cardId": "tiny-pr",
+    "headline": "The button stays loyal",
+    "fortune": "You fix one loose button before leaving. It behaves all day and never reveals how close to chaos you were.",
+    "lucky": { "number": "11", "color": "Vermilion", "hex": "#e85d3f", "moment": "9:11 AM", "snack": "poha" }
+  },
+  {
+    "id": "tiny-pr-note-keepsake", "cardId": "tiny-pr",
+    "headline": "Two lines become a keepsake",
+    "fortune": "A tiny note you leave for someone stays on their fridge much longer than expected. Your words found a home.",
+    "lucky": { "number": "24", "color": "Gulabi pink", "hex": "#e98ca8", "moment": "6:24 PM", "snack": "peda" }
+  },
+  {
+    "id": "tiny-pr-jar-hero", "cardId": "tiny-pr",
+    "headline": "The jar makes you famous",
+    "fortune": "You open the stubborn jar everyone surrendered to. Enjoy your brief and completely deserved hero status.",
+    "lucky": { "number": "05", "color": "Indigo", "hex": "#6657d9", "moment": "1:05 PM", "snack": "pakora" }
+  },
+  {
+    "id": "tiny-pr-golden-lane", "cardId": "tiny-pr",
+    "headline": "Five early minutes pay back",
+    "fortune": "You leave five minutes early and catch sunlight turning an ordinary lane golden. The day bows before beginning.",
+    "lucky": { "number": "15", "color": "Sunrise amber", "hex": "#f7a928", "moment": "7:15 AM", "snack": "bun maska" }
+  },
+  {
+    "id": "tiny-pr-song-encore", "cardId": "tiny-pr",
+    "headline": "Your silly song gets an encore",
+    "fortune": "You teach someone a ridiculous tune, then hear them humming it later. Congratulations: joy is now contagious.",
+    "lucky": { "number": "19", "color": "Peacock blue", "hex": "#277da1", "moment": "5:19 PM", "snack": "lassi" }
+  },
+  {
+    "id": "tiny-pr-steady-chair", "cardId": "tiny-pr",
+    "headline": "The wobble finally loses",
+    "fortune": "One folded scrap makes the annoying chair perfectly steady. Sit like a ruler who has restored order.",
+    "lucky": { "number": "03", "color": "Turquoise", "hex": "#3bb7a9", "moment": "3:03 PM", "snack": "chana chaat" }
+  },
+  {
+    "id": "tiny-pr-lucky-pinch", "cardId": "tiny-pr",
+    "headline": "One pinch earns applause",
+    "fortune": "Your accidental extra pinch makes dinner better. Nod wisely when everyone asks for the secret.",
+    "lucky": { "number": "12", "color": "Chilli red", "hex": "#d9534f", "moment": "12:12 PM", "snack": "aloo tikki" }
+  }
+]

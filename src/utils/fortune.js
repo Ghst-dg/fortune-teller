@@ -1,4 +1,10 @@
-import fortunes from '../data/fortunes.json'
+import chaiBreak from '../data/fortunes/chai-break.json'
+import greatUndo from '../data/fortunes/great-undo.json'
+import greenBuild from '../data/fortunes/green-build.json'
+import rubberDuck from '../data/fortunes/rubber-duck.json'
+import tinyPr from '../data/fortunes/tiny-pr.json'
+
+const fortunes = [...greenBuild, ...rubberDuck, ...chaiBreak, ...tinyPr, ...greatUndo]
 
 export function hashString(value) {
   return [...value].reduce((hash, char) => {

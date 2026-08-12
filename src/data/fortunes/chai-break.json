@@ -1,0 +1,80 @@
+[
+  {
+    "id": "chai-break-walk", "cardId": "chai-break",
+    "headline": "The walk pays rent",
+    "fortune": "A ten-minute walk will untangle a thought that has been sitting in your head with its shoes on.",
+    "lucky": { "number": "05", "color": "Vermilion", "hex": "#ff6542", "moment": "4:05 PM", "snack": "chai and bun" }
+  },
+  {
+    "id": "chai-break-calendar", "cardId": "chai-break",
+    "headline": "A plan cancels itself",
+    "fortune": "One dull plan will cancel itself, leaving you an unexpected hour. Spend at least seven minutes doing absolutely nothing.",
+    "lucky": { "number": "12", "color": "Coral", "hex": "#ff7163", "moment": "2:48 PM", "snack": "pakora" }
+  },
+  {
+    "id": "chai-break-tab", "cardId": "chai-break",
+    "headline": "The snack finds you",
+    "fortune": "On a tired afternoon, someone will hand you exactly the snack you were thinking about. This is what destiny studied for.",
+    "lucky": { "number": "09", "color": "Electric pink", "hex": "#ff4fa3", "moment": "5:09 PM", "snack": "lassi" }
+  },
+  {
+    "id": "chai-break-rain-respect", "cardId": "chai-break",
+    "headline": "The rain respects your timing",
+    "fortune": "The first drops wait until you reach an awning. A hot cup appears nearby, as if the clouds planned refreshments.",
+    "lucky": { "number": "16", "color": "Monsoon blue", "hex": "#4f86c6", "moment": "4:16 PM", "snack": "masala chai" }
+  },
+  {
+    "id": "chai-break-last-samosa", "cardId": "chai-break",
+    "headline": "The last samosa chooses you",
+    "fortune": "Just when the tray looks empty, one hot samosa appears. The person beside you insists you take it—and means it.",
+    "lucky": { "number": "01", "color": "Saffron", "hex": "#f59e0b", "moment": "5:01 PM", "snack": "samosa" }
+  },
+  {
+    "id": "chai-break-old-song", "cardId": "chai-break",
+    "headline": "Your song finds you",
+    "fortune": "An old favorite plays on a tiring afternoon. You remember every word and forget at least half the worry.",
+    "lucky": { "number": "23", "color": "Rose pink", "hex": "#f472b6", "moment": "3:23 PM", "snack": "coconut barfi" }
+  },
+  {
+    "id": "chai-break-pocket-chai", "cardId": "chai-break",
+    "headline": "Past-you buys the chai",
+    "fortune": "You find forgotten money in an old pocket—exactly enough for chai and something sweet. Past-you has impeccable timing.",
+    "lucky": { "number": "10", "color": "Marigold", "hex": "#ffb000", "moment": "10:10 AM", "snack": "jalebi" }
+  },
+  {
+    "id": "chai-break-remembered-order", "cardId": "chai-break",
+    "headline": "Someone remembers the small thing",
+    "fortune": "Without asking, someone remembers how you like your tea. The cup is ordinary; the care is not.",
+    "lucky": { "number": "06", "color": "Clay red", "hex": "#c85a42", "moment": "6:06 PM", "snack": "chai biscuit" }
+  },
+  {
+    "id": "chai-break-fast-queue", "cardId": "chai-break",
+    "headline": "The slow line surprises everyone",
+    "fortune": "The line you choose moves first for once. Please remain humble during this historic event.",
+    "lucky": { "number": "18", "color": "Mint green", "hex": "#79c99e", "moment": "11:18 AM", "snack": "kachori" }
+  },
+  {
+    "id": "chai-break-friendly-dog", "cardId": "chai-break",
+    "headline": "A street dog appoints you",
+    "fortune": "A friendly dog walks beside you for half a lane, then leaves after confirming you are going the right way.",
+    "lucky": { "number": "04", "color": "River aqua", "hex": "#46d9c5", "moment": "8:04 AM", "snack": "mathri" }
+  },
+  {
+    "id": "chai-break-evening-call", "cardId": "chai-break",
+    "headline": "Laughter calls after sunset",
+    "fortune": "An old friend rings with no request and no bad news—only a story that makes your cheeks hurt from laughing.",
+    "lucky": { "number": "27", "color": "Plum", "hex": "#8b5a83", "moment": "7:27 PM", "snack": "peda" }
+  },
+  {
+    "id": "chai-break-window-breeze", "cardId": "chai-break",
+    "headline": "The best breeze finds your chair",
+    "fortune": "On a warm afternoon, the only cool breeze chooses your corner. Everyone else will suspect favoritism.",
+    "lucky": { "number": "13", "color": "Sky blue", "hex": "#7dd3fc", "moment": "2:13 PM", "snack": "nimbu pani" }
+  },
+  {
+    "id": "chai-break-extra-sweet", "cardId": "chai-break",
+    "headline": "One extra sweet appears",
+    "fortune": "Someone quietly saves the last peda for you. You offer to share; they wisely refuse your politeness.",
+    "lucky": { "number": "09", "color": "Cream gold", "hex": "#f2c66d", "moment": "4:09 PM", "snack": "malai toast" }
+  }
+]
