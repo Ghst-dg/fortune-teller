@@ -17,9 +17,9 @@
 @import './styles/collage-surfaces.css';
 @import './styles/tarot-texture.css';
 @import './styles/animations.css';
-@import './styles/stage-transitions.css';
 @import './styles/responsive.css';
 @import './styles/large-screen.css';
 @import './styles/extreme-screens.css';
 @import './styles/distance-readability.css';
+@import './styles/distance-readability-wide.css';
 @import './styles/image-footprints.css';

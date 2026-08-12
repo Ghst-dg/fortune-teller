@@ -1,5 +1,4 @@
 import { usePalmCamera } from '../../hooks/usePalmCamera'
-import BrutalButton from '../ui/BrutalButton'
 import PalmGuide from './PalmGuide'
 
 const STATUS_COPY = {
@@ -8,13 +7,13 @@ const STATUS_COPY = {
   searching: ['FINDING RIGHT PALM', 'Open your right hand.'],
   'wrong-hand': ['OTHER HAND, PLEASE', 'Mithu asked for the right one.'],
   detected: ['RIGHT PALM FOUND', 'Hold it still.'],
-  unavailable: ['PALM READER NAPPING', 'Tap once when ready.'],
-  blocked: ['CAMERA BLOCKED', 'Use the demo.'],
+  unavailable: ['PALM READER PAUSED', 'Reload to try the camera again.'],
+  blocked: ['CAMERA BLOCKED', 'Allow camera, then reload.'],
   captured: ['GOT IT', 'Right palm secured.'],
 }
 
 export default function PalmCamera({ onCapture }) {
-  const { videoRef, status, confidence, showFallback, capture } = usePalmCamera(onCapture)
+  const { videoRef, status, confidence } = usePalmCamera(onCapture)
   const [label, detail] = STATUS_COPY[status]
 
   return (
@@ -33,11 +32,6 @@ export default function PalmCamera({ onCapture }) {
         <strong>{String(confidence).padStart(2, '0')}<small>%</small></strong>
       </div>
       <div className="confidence-track" aria-hidden="true"><i style={{ width: `${confidence}%` }} /></div>
-      {showFallback && (
-        <BrutalButton className="camera-fallback" tone="cream" onClick={() => capture(status === 'blocked')}>
-          {status === 'blocked' ? 'Use demo right palm' : 'Capture right palm now'}
-        </BrutalButton>
-      )}
     </div>
   )
 }

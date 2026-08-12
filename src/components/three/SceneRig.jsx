@@ -16,7 +16,7 @@ function easeInOutCubic(value) {
 
 export default function SceneRig({ stage, resetRevision, children }) {
   const reduced = useReducedMotion()
-  const previous = useRef({ zone: STAGE_ZONE[stage], resetRevision })
+  const previous = useRef({ stage, zone: STAGE_ZONE[stage], resetRevision })
   const pending = useRef(null)
   const transition = useRef(null)
   const currentLookY = useRef(TARGETS[stage][3])
@@ -26,8 +26,12 @@ export default function SceneRig({ stage, resetRevision, children }) {
   useEffect(() => {
     const reset = previous.current.resetRevision !== resetRevision
     const zoneChanged = previous.current.zone !== STAGE_ZONE[stage]
-    if (reset || zoneChanged) pending.current = { duration: reduced ? 0.01 : reset ? 0.85 : 1.6 }
-    previous.current = { zone: STAGE_ZONE[stage], resetRevision }
+    const stageChanged = previous.current.stage !== stage
+    if (reset || stageChanged) pending.current = {
+      duration: reduced ? .01 : reset ? .72 : zoneChanged ? 1.35 : .7,
+      mode: reset ? 'reset' : zoneChanged ? 'zone' : 'step',
+    }
+    previous.current = { stage, zone: STAGE_ZONE[stage], resetRevision }
   }, [reduced, resetRevision, stage])
 
   useFrame(({ camera, pointer }, delta) => {
@@ -41,10 +45,10 @@ export default function SceneRig({ stage, resetRevision, children }) {
       const travel = transition.current
       travel.elapsed += Math.min(delta, 0.05)
       const raw = Math.min(1, travel.elapsed / travel.duration)
-      const progress = easeInOutCubic(raw)
+      const progress = travel.mode === 'reset' ? 1 - (1 - raw) ** 3 : easeInOutCubic(raw)
       camera.position.y = MathUtils.lerp(travel.fromY, travel.toY, progress)
       currentLookY.current = MathUtils.lerp(travel.fromLook, travel.toLook, progress)
-      push = Math.sin(raw * Math.PI) * 0.35
+      push = Math.sin(raw * Math.PI) * (travel.mode === 'step' ? .18 : .4)
       if (raw >= 1) transition.current = null
     } else {
       camera.position.y = MathUtils.damp(camera.position.y, y + (reduced ? 0 : pointer.y * 0.1), 2.8, delta)

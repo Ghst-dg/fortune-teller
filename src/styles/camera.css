@@ -50,6 +50,5 @@
 
 .confidence-track { height: 8px; background: var(--white); border: 2px solid var(--ink); }
 .confidence-track i { display: block; height: 100%; background: var(--aqua); transition: width .18s ease; }
-.camera-fallback { width: calc(100% - 8px); margin: 13px 4px 5px; justify-content: space-between; min-height: 49px; }
 .privacy-note { grid-area: privacy; align-self: end; max-width: 340px; margin: 24px 0 0; padding: 12px; background: rgba(255,245,214,.9); border: var(--border-thin); box-shadow: var(--shadow-sm); font-size: 10px; font-weight: 640; }
 .privacy-note span { color: var(--aqua); text-shadow: 1px 1px 0 var(--ink); }

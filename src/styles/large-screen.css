@@ -69,9 +69,6 @@
   .result-visual { width: 320px; height: min(460px, 53vh); }
   .fortune-paper { max-width: 790px; }
   .stage-collage { width: 158px; height: min(42vh, 390px); }
-  .oracle-guide { --guide-width: clamp(224px, 13vw, 246px); --bubble-width: 174px; }
-  .oracle-guide__art { height: min(46vh, 420px); }
-  .oracle-guide__bubble { top: calc(var(--oracle-content-top, 0px) - 68px); font-size: 17px; }
 }
 
 @media (min-width: 1920px) and (min-height: 980px) {
@@ -91,8 +88,6 @@
   .result-card { width: 180px; }
   .fortune-paper { max-width: 840px; }
   .stage-collage { width: clamp(165px, 8vw, 188px); height: min(43vh, 430px); }
-  .oracle-guide { --guide-width: clamp(250px, 13vw, 284px); --bubble-width: 192px; }
-  .oracle-guide__art { height: min(48vh, 470px); }
 }
 
 @media (min-width: 2560px) and (min-height: 1200px) {
@@ -112,14 +107,10 @@
   .result-visual { width: 400px; height: 580px; }
   .fortune-paper { max-width: 900px; }
   .stage-collage { width: 200px; height: 460px; }
-  .oracle-guide { --guide-width: 310px; --bubble-width: 205px; }
-  .oracle-guide__art { height: 490px; }
 }
 
 @media (min-width: 2560px) {
   .app-header { padding-inline: max(64px, calc((100vw - 2200px) / 2)); }
   .stage-collage--left { left: max(20px, calc((100vw - 2200px) / 2)); }
   .stage-collage--right { right: max(20px, calc((100vw - 2200px) / 2)); }
-  .oracle-guide { right: max(12px, calc((100vw - 2200px) / 2)); }
-  .oracle-guide--side-left { right: auto; left: max(12px, calc((100vw - 2200px) / 2)); }
 }

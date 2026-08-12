@@ -17,7 +17,7 @@ Use `bun run build` for a production build and `bun run lint` for code checks.
 invitation -> name + date of birth -> detected palm photo -> playful scan -> shuffled random tarot draw -> 1-minute reading -> reset
 ```
 
-MediaPipe detects an open, steady palm in the browser and triggers the photo automatically. Camera frames stay only in in-memory app state: they are never uploaded or persisted, and reset clears them. If detection cannot load, the user can capture the live frame manually; if camera permission is unavailable, the experience continues with a demo scan.
+MediaPipe detects an open, steady right palm in the browser and triggers the photo automatically. Camera frames stay only in in-memory app state: they are never uploaded or persisted, and reset clears them. There is no manual shutter; a delayed automatic safety capture keeps the visit moving if tracking struggles.
 
 The vertical world moves from a Banarasi craft-and-food market to balcony-lined galis, then down to the river ghats. The guide changes to a different still pose at every step; only her comic bubble animates.
 
