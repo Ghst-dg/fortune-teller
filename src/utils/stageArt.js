@@ -6,9 +6,9 @@ const ZONES = {
   scanning: 'gali', tarot: 'ghat', result: 'ghat',
 }
 const POOLS = {
-  market: Array.from({ length: 7 }, (_, index) => `/art/kashi/market-${String(index + 1).padStart(2, '0')}.webp`),
-  gali: Array.from({ length: 7 }, (_, index) => `/art/kashi/gali-${String(index + 1).padStart(2, '0')}.webp`),
-  ghat: Array.from({ length: 6 }, (_, index) => `/art/kashi/ghat-${String(index + 1).padStart(2, '0')}.webp`),
+  market: Array.from({ length: 9 }, (_, index) => `/art/kashi/market-${String(index + 1).padStart(2, '0')}.webp`),
+  gali: Array.from({ length: 9 }, (_, index) => `/art/kashi/gali-${String(index + 1).padStart(2, '0')}.webp`),
+  ghat: Array.from({ length: 8 }, (_, index) => `/art/kashi/ghat-${String(index + 1).padStart(2, '0')}.webp`),
 }
 const ACCENT_COLORS = {
   brocade: '#9d3e75', ganga: 'var(--aqua)', gulabi: 'var(--pink)',

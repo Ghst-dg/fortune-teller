@@ -9,7 +9,7 @@ export const STAGE_ZONE = {
 
 export const TIMINGS = {
   cameraWarmup: 900,
-  stableSamples: 17,
+  stableSamples: 8,
   scanDuration: 6400,
   tarotCut: 900,
   tarotDeal: 1550,

@@ -1,105 +1,39 @@
 .stage-transition {
-  --transition-ms: 560ms;
-  --paper: #f1d08e;
-  --band: #b7433d;
-  --spark: var(--sun);
   position: fixed;
-  z-index: 15;
+  z-index: 30;
   inset: 0;
   overflow: hidden;
-  visibility: hidden;
+  opacity: 1;
+  background: var(--transition-bg);
   pointer-events: none !important;
   contain: strict;
   isolation: isolate;
-  animation: transition-lifecycle var(--transition-ms) step-end both;
+  animation: kashi-transition-release var(--transition-ms) cubic-bezier(.35, 0, .18, 1) both;
 }
 
-.stage-transition[data-zone='market'] { --paper: #f2cd7c; --band: #a9363d; }
-.stage-transition[data-zone='street'] { --paper: #d9d3ad; --band: #176f76; }
-.stage-transition[data-zone='ghat'] { --paper: #edc58a; --band: #255f74; }
-.stage-transition[data-accent='0'] { --spark: var(--coral); }
-.stage-transition[data-accent='1'] { --spark: var(--aqua); }
-.stage-transition[data-accent='2'] { --spark: var(--sun); }
-.stage-transition[data-mode='rewind'] { --transition-ms: 430ms; }
-
-.stage-transition__paper {
-  position: absolute;
-  z-index: 1;
-  inset: -2px;
-  background:
-    radial-gradient(circle at 14% 28%, color-mix(in srgb, var(--spark) 32%, transparent) 0 2px, transparent 3px),
-    radial-gradient(circle at 81% 72%, rgba(25, 19, 15, .13) 0 2px, transparent 3px),
-    repeating-linear-gradient(2deg, rgba(25, 19, 15, .055) 0 1px, transparent 1px 9px),
-    var(--paper);
-  background-size: 43px 41px, 57px 53px, auto, auto;
-  will-change: clip-path;
-  animation: river-aperture var(--transition-ms) cubic-bezier(.58, 0, .18, 1) both;
-}
-
-.stage-transition__paper::after {
+.stage-transition__veil {
   position: absolute;
   inset: 0;
-  content: '';
-  opacity: .14;
-  background: url('/textures/banarasi-brocade.webp') center / 420px auto;
-  mix-blend-mode: multiply;
-}
-
-.stage-transition__brocade {
-  position: absolute;
-  z-index: 2;
-  left: -3%;
-  top: 50%;
-  width: 106%;
-  height: clamp(68px, 11vh, 104px);
   background:
-    linear-gradient(90deg, rgba(25, 19, 15, .18), transparent 24% 76%, rgba(25, 19, 15, .18)),
-    url('/textures/banarasi-brocade.webp') center / 330px auto,
-    var(--band);
-  border-block: 4px solid var(--ink);
-  box-shadow: 0 8px 0 rgba(25, 19, 15, .25);
-  transform: translateY(-50%);
-  transform-origin: center;
-  will-change: transform, opacity;
-  animation: brocade-aperture var(--transition-ms) cubic-bezier(.58, 0, .18, 1) both;
+    radial-gradient(ellipse at 50% 45%, rgba(255, 230, 155, .2), transparent 46%),
+    linear-gradient(145deg, rgba(25, 19, 15, .12), transparent 45% 60%, rgba(25, 19, 15, .16)),
+    var(--transition-bg);
 }
 
-.stage-transition__ripples {
-  position: absolute;
-  z-index: 3;
-  left: 50%;
-  top: 50%;
-  width: min(72vw, 820px);
-  height: 82px;
-  transform: translate(-50%, -50%);
+.stage-transition__canvas { position: absolute !important; inset: 0; width: 100% !important; height: 100% !important; }
+.stage-transition[data-mode='rewind'] { animation-timing-function: cubic-bezier(.22, .72, .18, 1); }
+.stage-transition--reduced { animation-name: kashi-transition-reduced; }
+
+@keyframes kashi-transition-release {
+  0%, 54% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
 }
 
-.stage-transition__ripples i {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100%;
-  height: 22px;
-  border-top: 3px solid var(--spark);
-  border-radius: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%) scaleX(.08);
-  animation: ink-ripple var(--transition-ms) ease-out both;
+@keyframes kashi-transition-reduced {
+  from { opacity: .92; }
+  to { opacity: 0; visibility: hidden; }
 }
 
-.stage-transition__ripples i:nth-child(2) { width: 76%; animation-delay: 45ms; }
-.stage-transition__ripples i:nth-child(3) { width: 52%; animation-delay: 90ms; }
-.stage-transition[data-mode='rewind'] .stage-transition__paper { animation-name: river-rewind; }
-.stage-transition[data-mode='rewind'] .stage-transition__brocade { animation-name: brocade-rewind; }
-.stage-transition[data-mode='rewind'] .stage-transition__ripples { animation: ripple-rise var(--transition-ms) ease-in both; }
-
-@keyframes transition-lifecycle { 0%, 99% { visibility: visible; } 100% { visibility: hidden; } }
-@keyframes river-aperture { 0% { clip-path: inset(0); } 18% { clip-path: inset(5% 0); } 100% { clip-path: inset(50% 0); } }
-@keyframes river-rewind { 0% { clip-path: inset(0); } 16% { clip-path: inset(0 0 8%); } 100% { clip-path: inset(0 0 100%); } }
-@keyframes brocade-aperture { 0%, 12% { opacity: 1; transform: translateY(-50%) scaleX(1); } 100% { opacity: 0; transform: translateY(-50%) scaleX(0); } }
-@keyframes brocade-rewind { 0% { opacity: 1; transform: translateY(-50%) scaleX(1); } 100% { opacity: 0; transform: translateY(-58vh) scaleX(.28); } }
-@keyframes ink-ripple { 6% { opacity: .9; } 72%, 100% { opacity: 0; transform: translate(-50%, -50%) scaleX(1.18); } }
-@keyframes ripple-rise { to { opacity: 0; transform: translate(-50%, -58vh); } }
-
-@media (max-width: 700px) { .stage-transition__brocade { height: 62px; background-size: auto, 230px auto, auto; } }
-@media (prefers-reduced-motion: reduce) { .stage-transition { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .stage-transition { animation-duration: 180ms; }
+}

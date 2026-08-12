@@ -1,0 +1,77 @@
+/* Illustration footprints track the available gutter, never the document flow. */
+.oracle-guide { --guide-width: clamp(180px, 15.5vw, 246px); --bubble-width: clamp(140px, 11vw, 164px); }
+.oracle-guide__art { height: min(46vh, 390px); }
+.stage-collage { width: clamp(116px, 10vw, 148px); height: clamp(240px, 42vh, 360px); }
+.result-visual { width: min(320px, 26vw); height: min(460px, 55vh); }
+
+@media (max-width: 920px) {
+  .oracle-guide { --guide-width: 154px; --bubble-width: 154px; }
+  .oracle-guide__art { height: 238px; }
+  .stage-collage { width: 104px; height: 250px; }
+  .fortune-stage { grid-template-columns: 210px 1fr; }
+  .result-visual { width: 200px; height: 380px; }
+}
+
+@media (max-width: 700px) {
+  .oracle-guide { --guide-width: 94px; --bubble-width: min(148px, 44vw); }
+  .oracle-guide__art { height: 128px; }
+  .stage-collage { width: 82px; height: 198px; }
+  .fortune-stage { display: block; }
+  .result-visual { width: min(100%, 390px); height: 108px; margin-bottom: 14px; }
+  .fortune-stage .result-card { width: clamp(54px, 16vw, 66px); }
+  .fortune-stage .result-card b { width: 31px; height: 31px; font-size: 19px; }
+}
+
+@media (min-width: 921px) and (max-height: 820px) {
+  .oracle-guide { --guide-width: 164px; --bubble-width: 142px; }
+  .oracle-guide__art { height: 245px; }
+  .stage-collage { width: 112px; height: 250px; }
+  .result-visual { width: 260px; height: 350px; }
+}
+
+@media (min-width: 921px) and (max-height: 680px) {
+  .oracle-guide { --guide-width: 132px; }
+  .oracle-guide__art { height: 180px; }
+  .stage-collage { width: 88px; height: 190px; }
+  .result-visual { width: 225px; height: 270px; }
+}
+
+@media (min-width: 1600px) and (max-width: 2559px) and (min-height: 920px) {
+  .oracle-guide { --guide-width: 266px; --bubble-width: 182px; right: -44px; }
+  .oracle-guide--side-left { right: auto; left: -44px; }
+  .oracle-guide__art { height: min(49vh, 450px); }
+  .stage-collage { width: 180px; height: min(46vh, 430px); }
+  .fortune-stage { grid-template-columns: 350px minmax(700px, 1fr); }
+  .result-visual { width: 350px; height: min(510px, 56vh); }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) and (min-height: 980px) {
+  .oracle-guide { --guide-width: 304px; --bubble-width: 205px; }
+  .oracle-guide__art { height: min(51vh, 510px); }
+  .stage-collage { width: 205px; height: min(48vh, 475px); }
+  .fortune-stage { grid-template-columns: 410px minmax(740px, 1fr); }
+  .result-visual { width: 410px; height: min(600px, 59vh); }
+}
+
+@media (min-width: 2560px) and (min-height: 1200px) {
+  .oracle-guide { --guide-width: 340px; --bubble-width: 230px; }
+  .oracle-guide__art { height: 560px; }
+  .stage-collage { width: 235px; height: 540px; }
+  .fortune-stage { grid-template-columns: 450px minmax(760px, 1fr); }
+  .result-visual { width: 445px; height: 650px; }
+}
+
+@media (min-width: 3200px) and (min-height: 1800px) {
+  .oracle-guide { --guide-width: 420px; --bubble-width: 280px; }
+  .oracle-guide__art { height: 680px; }
+  .stage-collage { width: 290px; height: 660px; }
+  .fortune-stage { grid-template-columns: 560px minmax(900px, 1fr); }
+  .result-visual { width: 550px; height: 790px; }
+}
+
+@media (max-width: 700px) and (max-height: 620px) {
+  .oracle-guide { --guide-width: 86px; }
+  .oracle-guide__art { height: 108px; }
+  .stage-collage { width: 72px; height: 168px; }
+  .result-visual { height: 82px; margin-bottom: 7px; }
+}
